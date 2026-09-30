@@ -100,29 +100,32 @@ cd unsealed-penypost-demo
 
 #### 2. Konfigurasi Firebase (`google-services.json`)
 Aplikasi membutuhkan konfigurasi Firebase client untuk kompilasi plugin Google Services:
-1. Salin template yang telah disediakan:
+1. **Unduh File Asli**: Unduh file `google-services.json` dari folder Google Drive / tautan dokumen yang telah dilampirkan pada formulir submission, lalu letakkan di dalam folder `app/google-services.json`.
+2. *(Alternatif Template)*: Jika hanya ingin meninjau source code tanpa koneksi live, salin template:
    ```bash
    cp app/google-services.json.example app/google-services.json
    ```
-2. *(Opsional)* Jika Anda memiliki file `google-services.json` dari project Firebase Anda sendiri atau project demo yang diberikan, letakkan langsung di dalam direktori `app/`.
 
 #### 3. Pilih Build Variant
 1. Buka project di **Android Studio**.
 2. Tunggu proses **Gradle Sync** selesai.
 3. Buka tab **Build Variants** (di bilah kiri bawah Android Studio).
 4. Pastikan varian yang dipilih adalah **`devDebug`**.
-   - *Catatan: Varian `devDebug` secara otomatis terhubung ke development backend yang aman (`https://api.unsealed.app/`).*
+   - *Catatan: Varian `devDebug` secara otomatis terhubung ke development backend (`https://unsealed-be-development.up.railway.app/`) dan mengaktifkan Chucker HTTP Inspector.*
 
 #### 4. Jalankan Aplikasi
 * Hubungkan perangkat fisik Android (aktifkan USB Debugging) atau jalankan Android Emulator (rekomendasi: API 30+).
 * Klik tombol **Run 'app'** (`Shift + F10`) di Android Studio.
+* *(Atau langsung pasang APK demo `app-dev-debug.apk` yang sudah tersedia di folder Google Drive submission).*
 
 ---
 
-## 🔑 Catatan Pengujian & Otentikasi (Testing Guide)
+## 🔑 Catatan Pengujian & Akun Demo (Testing Guide)
 
-* **Otentikasi Email & Password**:
-  Pada layar Login, Anda dapat langsung mengklik opsi **Email** untuk mendaftar akun baru (*Sign Up*) atau masuk (*Sign In*).
+* **Akun Demo Pengujian**:
+  Daftar kredensial akun uji coba (*demo test accounts*) telah dicantumkan di dalam dokumen tautan Google Drive submission. Anda dapat langsung menggunakannya untuk login (*Sign In*) agar bisa langsung melihat data surat, feed, dan relasi pertemanan yang sudah terisi.
+* **Otentikasi Mandiri**:
+  Selain menggunakan akun demo yang tersedia, Anda juga dapat mendaftar akun baru (*Sign Up*) secara mandiri menggunakan opsi **Email & Password** pada layar Login.
   > *Catatan: Fitur Google Sign-In (Credential Manager) membutuhkan pendaftaran fingerprint SHA-1 keystore lokal di Firebase Console. Oleh karena itu, untuk proses review atau demo di mesin lokal baru, gunakan metode **Email & Password Authentication** yang dapat langsung berfungsi tanpa konfigurasi keystore tambahan.*
 
 ---
