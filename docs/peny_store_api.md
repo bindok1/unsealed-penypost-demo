@@ -7,7 +7,7 @@ Dokumen ini adalah spesifikasi backend lengkap dan panduan integrasi untuk fitur
 ## 1. Overview & Autentikasi
 
 ### Base URL
-- **Development**: `https://unsealed-be-development.up.railway.app`
+- **Development**: `https://api.unsealed.app/`
 - **Local**: `http://localhost:8080`
 
 ### Skema Autentikasi Berdasarkan Konsumen
