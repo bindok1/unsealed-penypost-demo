@@ -77,6 +77,17 @@ android {
                 "\"642530889152-v8q4i551n33sf39h4rchfgpvkh92gv0b.apps.googleusercontent.com\""
             )
         }
+        create("prod") {
+            dimension = "env"
+            // Untuk repositori demo publik: flavor prod tetap diarahkan ke development backend
+            // agar memperlihatkan arsitektur multi-flavor tanpa mengekspos endpoint privat produksi.
+            buildConfigField("String", "BASE_URL", "\"https://unsealed-be-development.up.railway.app/\"")
+            buildConfigField(
+                "String",
+                "GOOGLE_WEB_CLIENT_ID",
+                "\"642530889152-v8q4i551n33sf39h4rchfgpvkh92gv0b.apps.googleusercontent.com\""
+            )
+        }
     }
 
     buildTypes {
