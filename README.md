@@ -127,5 +127,21 @@ Aplikasi membutuhkan konfigurasi Firebase client untuk kompilasi plugin Google S
 
 ---
 
+## 🤖 Pernyataan Penggunaan AI (Generative AI Disclosure)
+
+Proyek ini dikembangkan dengan memanfaatkan bantuan alat **Generative AI** (AI Coding Assistant & Pair Programming) sebagai akselerator produktivitas. Berikut rincian penggunaannya secara transparan:
+
+1. **Area Penggunaan AI**:
+   - **Brainstorming & Pemodelan Algoritma**: Eksplorasi formula matematika interpolasi geografis (*Great-Circle curved trajectory*) untuk pemetaan rute kurir pada `DeliveryRouteMap.kt`.
+   - **Akselerasi Boilerplate & Data Contract**: Membantu penyusunan DTO, Room DAO, Moshi JSON adapter, dan template komponen Jetpack Compose dasar.
+   - **Refactoring & Optimasi UI**: Saran optimasi performa *recomposition* Compose, penanganan gesture kanvas (`AnnotateCanvas.kt`), dan styling partikel Canvas.
+   - **Penyusunan Dokumentasi**: Membantu merapikan struktur dokumentasi teknis, setup guide, dan `README.md`.
+
+2. **Peran & Verifikasi Pengembang (Human Oversight)**:
+   - **Kepemilikan Penuh (Full Ownership)**: Seluruh arsitektur aplikasi (Clean Architecture, MVI/MVVM, modularisasi), logika bisnis, manajemen token otentikasi, alur navigasi, dan integrasi backend dirancang, ditinjau, dan ditentukan secara mandiri oleh saya.
+   - **Verifikasi & Pengujian Manual**: Setiap baris kode yang dihasilkan atau dioptimalkan dengan bantuan AI telah melalui proses peninjauan manual (*code review*), penyesuaian logika (*fine-tuning*), serta pengujian langsung (*manual testing*) di perangkat Android untuk menjamin kualitas, keamanan, dan keandalan kode.
+
+---
+
 ## 📄 Lisensi & Hak Cipta
 Dibuat untuk keperluan portofolio dan demonstrasi kapabilitas rekayasa perangkat lunak mobile (Android). Hak cipta dilindungi.
