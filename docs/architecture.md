@@ -479,10 +479,10 @@ NetworkModule ─── Retrofit ───────┘                  injec
 
 ## 11. Build Variants
 
-| Flavor | BASE_URL |
-|---|---|
-| `dev` | `https://unsealed-be-development.up.railway.app/` |
-| `prod` | `https://api.unsealed.app/` |
+| Flavor | BASE_URL                        |
+|---|---------------------------------|
+| `dev` | `https://dev-api.unsealed.app/` |
+| `prod` | `https://api.unsealed.app/`     |
 
 | Build Type | Chucker | Logging |
 |---|---|---|

@@ -111,7 +111,7 @@ Aplikasi membutuhkan konfigurasi Firebase client untuk kompilasi plugin Google S
 2. Tunggu proses **Gradle Sync** selesai.
 3. Buka tab **Build Variants** (di bilah kiri bawah Android Studio).
 4. Pastikan varian yang dipilih adalah **`devDebug`**.
-   - *Catatan: Varian `devDebug` secara otomatis terhubung ke development backend yang aman (`https://unsealed-be-development.up.railway.app/`).*
+   - *Catatan: Varian `devDebug` secara otomatis terhubung ke development backend yang aman (`https://api.unsealed.app/`).*
 
 #### 4. Jalankan Aplikasi
 * Hubungkan perangkat fisik Android (aktifkan USB Debugging) atau jalankan Android Emulator (rekomendasi: API 30+).

@@ -5,7 +5,7 @@ Panduan cara pakai API Mode Peny dari sisi client Android. Beda dari dua dokumen
 - `docs/api_contract.md` §`peny` — kontrak DTO mentah (field, tipe, error code), sumber kebenaran buat shape request/response.
 - **Dokumen ini** — alur pemakaian & state management dari sisi client: kapan manggil apa, apa yang disimpan di mana, gimana nanganin tiap error case secara UX. Kalau ada beda antara dokumen ini dan `api_contract.md` soal shape data, `api_contract.md` yang benar (dokumen ini fokus ke alur, bukan re-dokumentasi field).
 
-Base URL & auth sama seperti endpoint lain: `Authorization: Bearer <firebase_id_token>`, base `https://unsealed-be-development.up.railway.app` (dev) — lihat `docs/api_contract.md` §Auth.
+Base URL & auth sama seperti endpoint lain: `Authorization: Bearer <firebase_id_token>`, base `https://api.unsealed.app/` (dev) — lihat `docs/api_contract.md` §Auth.
 
 ---
 

@@ -7,7 +7,7 @@ Dokumen ini adalah **kontrak API resmi & panduan integrasi khusus untuk Mobile A
 ## 1. Overview & Setup Autentikasi
 
 ### Base URL
-- **Development**: `https://unsealed-be-development.up.railway.app`
+- **Development**: `https://api.unsealed.app/`
 - **Local**: `http://localhost:8080`
 
 ### Headers Wajib
