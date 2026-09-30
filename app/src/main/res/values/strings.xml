@@ -1,0 +1,998 @@
+<resources>
+    <string name="app_name">PenyPost</string>
+
+    <string name="nav_mailbox">Mailbox</string>
+    <string name="nav_write">Write</string>
+    <string name="nav_stamps">Stamps</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Font Picker (FontPickerSheet.kt) -->
+    <string name="font_picker_title">Choose a Writing Style</string>
+    <string name="font_picker_preview_text">Hello,</string>
+    <string name="font_picker_selected_desc">Selected</string>
+    <string name="font_picker_bold_desc">Bold</string>
+    <string name="font_picker_italic_desc">Italic</string>
+    <string name="font_picker_more_fonts_label">More Fonts</string>
+    <string name="font_picker_download_desc">Download font</string>
+    <string name="font_picker_downloading_desc">Downloading</string>
+    <string name="font_picker_download_failed_desc">Download failed, tap to retry</string>
+
+    <!-- Formatting Bar (FormattingBar.kt) -->
+    <string name="formatting_bar_font_desc">Font</string>
+    <string name="formatting_bar_alignment_desc">Alignment</string>
+    <string name="formatting_bar_indent_desc">Indent</string>
+    <string name="formatting_bar_hide_keyboard_desc">Hide keyboard</string>
+    <string name="formatting_bar_text_size_desc">Text Size</string>
+    <string name="formatting_bar_text_size_small">Small</string>
+    <string name="formatting_bar_text_size_large">Large</string>
+
+    <!-- Annotate Mode toolbar (AnnotateToolbar.kt) -->
+    <string name="annotate_tool_pen">Pen</string>
+    <string name="annotate_tool_fine">Fine</string>
+    <string name="annotate_tool_wave">Wave</string>
+    <string name="annotate_tool_deco">Deco</string>
+    <string name="annotate_tool_eraser">Eraser</string>
+
+    <!-- Annotate ink color picker (AnnotateColorPicker.kt) -->
+    <string name="annotate_color_mode_spectrum">Spectrum</string>
+    <string name="annotate_color_mode_grid">Grid</string>
+    <string name="annotate_color_mode_slider">Slider</string>
+    <string name="annotate_opacity_label">Opacity</string>
+    <string name="annotate_hex_copy_desc">Copy color code</string>
+    <string name="annotate_hex_copied_desc">Copied</string>
+
+    <!-- Top Toolbar (ComposeToolbar.kt) -->
+    <string name="toolbar_undo_desc">Undo</string>
+    <string name="toolbar_redo_desc">Redo</string>
+    <string name="toolbar_font_desc">Font</string>
+    <string name="toolbar_keyboard_desc">Keyboard</string>
+    <string name="toolbar_annotate_desc">Annotate</string>
+    <string name="toolbar_send_desc">Send</string>
+
+    <!-- Compose Validation (ComposeScreen.kt) -->
+    <string name="compose_error_body_too_short">Your letter is a bit too short! Write at least 20 characters so Peny can carry your warm story 🐧</string>
+    <string name="compose_error_body_too_long">Your letter is too long! Keep it under 2000 characters so Peny\'s bag isn\'t too heavy 📦🐧</string>
+    <string name="compose_error_dismiss_desc">Dismiss error</string>
+
+    <!-- Letter Canvas (LetterCanvas.kt) -->
+    <string name="compose_body_placeholder">Dear ___,</string>
+
+    <!-- Mode Peny (PenyTriggerGlyph.kt, PenyReplyOverlay.kt, ComposeViewModel.kt) -->
+    <string name="compose_peny_trigger_content_desc">Talk to Peny</string>
+    <!-- Shown in place of compose_body_placeholder once ComposeUiState.isPenyIdleHintVisible flips true (LetterCanvas.kt) — tapping it activates Mode Peny, same as PenyWandHint. -->
+    <string name="compose_peny_idle_hint_prompt">Not sure what to write? Tap for a little help from Peny ✨</string>
+    <string-array name="compose_peny_input_placeholders">
+        <item>Whisper something to Peny…</item>
+        <item>How\'s your day been?</item>
+        <item>What\'s on your mind right now?</item>
+        <item>Peny\'s listening, if you want to talk.</item>
+        <item>Anything on your heart today?</item>
+        <item>Tell Peny something small.</item>
+        <item>Peny\'s here, whenever you\'re ready.</item>
+    </string-array>
+    <string-array name="compose_peny_local_greetings">
+        <item>Hi there! 🐧 What\'s on your mind?</item>
+        <item>Hey! Peny\'s all ears.</item>
+        <item>Hello! Got something you want to tell Peny?</item>
+        <item>Waddle waddle~ hi! What\'s up?</item>
+        <item>Hey hey! Peny\'s listening.</item>
+        <item>Oh, hi! Peny was just sorting some letters. What\'s going on?</item>
+    </string-array>
+    <string-array name="compose_peny_local_invites">
+        <item>Tell Peny more? I\'m curious 🐧</item>
+        <item>Hmm, go on… Peny\'s listening.</item>
+        <item>Oh? What happened?</item>
+        <item>Peny wants to hear more about that.</item>
+        <item>Say more — I\'m here.</item>
+        <item>Mm-hm, and then?</item>
+    </string-array>
+    <string-array name="compose_peny_energy_insufficient_messages">
+        <item>Peny\'s a little tired and out of energy right now 🐧 Come back after a quick check-in or quest!</item>
+        <item>Oops, Peny\'s energy just ran out! Grab some more from your daily quests and let\'s keep talking.</item>
+        <item>Peny needs to recharge for a sec — check your daily rewards for more energy!</item>
+    </string-array>
+    <string-array name="compose_peny_reply_failed_messages">
+        <item>…the paper seems to have gone quiet for a moment. Try again?</item>
+        <item>Hmm, Peny didn\'t quite catch that. One more try?</item>
+        <item>The ink seems to have paused… give it another go?</item>
+    </string-array>
+    <string name="compose_peny_copy_dialog_title">Copy to Letter?</string>
+    <string name="compose_peny_copy_dialog_body">Would you like to copy the last text from Peny Mode into your letter?</string>
+    <string name="compose_peny_copy_dialog_confirm">Copy to Letter</string>
+    <string name="compose_peny_copy_dialog_dismiss">Don\'t Copy</string>
+    <string name="compose_peny_energy_paywall_title">Peny\'s Energy Ran Out!</string>
+    <string name="compose_peny_energy_paywall_body">To keep Peny writing with you, top up your Energy first!</string>
+    <string name="compose_peny_energy_paywall_cta">Get More Energy</string>
+    <string name="compose_peny_energy_paywall_dismiss">Not Now</string>
+
+    <!-- Sticky Reply Banner (StickyReplyBanner.kt) -->
+    <string name="sticky_reply_banner_reply_desc">Reply</string>
+    <string name="sticky_reply_banner_replying_to">Replying to %1$s</string>
+    <string name="sticky_reply_banner_read_original">Tap to read the original letter</string>
+    <string name="sticky_reply_banner_read_desc">Read</string>
+    <string name="sticky_reply_banner_view_thread">Tap to view the conversation</string>
+    <string name="sticky_reply_banner_view_thread_desc">View thread</string>
+
+    <!-- Original Letter Bottom Sheet (OriginalLetterBottomSheet.kt) -->
+    <string name="original_letter_sheet_title">Letter from %1$s</string>
+    <string name="original_letter_sheet_empty_body">(A letter with no text content)</string>
+    <string name="original_letter_sheet_cta_back">Back to Writing</string>
+
+    <!-- Device Capability Bottom Sheet (DeviceCapabilityBottomSheet.kt) -->
+    <string name="compose_device_unsupported_title">This Feature Needs a Zippier Phone 🐧</string>
+    <string name="compose_device_unsupported_body">Photos and doodles need a bit more phone power to stay crisp. No worries — you can still send a warm letter with just text!</string>
+    <string name="compose_device_unsupported_cta">Got It, Peny!</string>
+
+
+    <!-- Overflow Menu (OverflowMenuButton.kt) -->
+    <string name="toolbar_more_desc">More</string>
+    <string name="overflow_menu_change_paper">Change Paper</string>
+    <string name="overflow_menu_insert_image">Insert an Image</string>
+    <string name="overflow_menu_add_sticker">Add a Sticker</string>
+    <string name="overflow_menu_save_photos">Save to Photos</string>
+    <string name="overflow_menu_share">Share Letter</string>
+    <string name="overflow_menu_public_showcase_enable">Show in Postal Collection</string>
+    <string name="overflow_menu_public_showcase_disable">Remove from Postal Collection</string>
+    <!-- TEMPORARY QA entry point (OverflowMenuButton.kt) — remove once PenyTriggerGlyph is confirmed working -->
+    <string name="overflow_menu_peny_mode_activate">Activate Peny Mode (Test)</string>
+    <string name="overflow_menu_peny_mode_deactivate">Deactivate Peny Mode (Test)</string>
+
+    <!-- Public showcase opt-in confirm dialog (ComposeScreen.kt) -->
+    <string name="compose_public_showcase_dialog_title">Publish this letter?</string>
+    <string name="compose_public_showcase_dialog_body">Anyone who opens your profile will be able to see this letter\'s envelope and paper design in your Postal Collection. It still gets delivered normally — this only makes its look public. Avoid sharing personal info (phone number, address, etc.) in a letter you publish.</string>
+    <string name="compose_public_showcase_dialog_confirm">Yes, publish</string>
+    <string name="compose_public_showcase_dialog_cancel">Not now</string>
+
+    <!-- Inserted Image edit controls (EditableImage.kt) -->
+    <string name="image_edit_more_desc">More image options</string>
+    <string name="image_edit_change_desc">Change image</string>
+    <string name="image_edit_crop_desc">Crop</string>
+    <string name="image_edit_duplicate_desc">Duplicate</string>
+    <string name="image_edit_send_to_back_desc">Send to Back</string>
+    <string name="image_edit_bring_to_front_desc">Bring to Front</string>
+    <string name="image_edit_delete_desc">Delete image</string>
+    <string name="image_edit_resize_desc">Drag to resize</string>
+    <string name="image_edit_reset_scale">Reset size</string>
+    <string name="image_crop_reset">Reset</string>
+    <string name="image_crop_done">Done</string>
+
+    <!-- Paper Picker (PaperPickerSheet.kt) -->
+    <string name="paper_picker_title">Change Paper</string>
+
+    <!-- Paper Templates (PaperTemplate.kt) -->
+    <string name="paper_template_grid">Grid</string>
+    <string name="paper_template_lined">Lined</string>
+    <string name="paper_template_indigo">Indigo</string>
+    <string name="paper_template_aged_kraft">Aged Kraft</string>
+    <string name="paper_template_soft_beige">Soft Beige</string>
+    <string name="paper_template_dotted">Dotted</string>
+    <string name="paper_template_plain_white">Plain White</string>
+    <string name="paper_template_blush_marble">Blush Marble</string>
+
+    <!-- Select Recipient (SelectRecipientScreen.kt) -->
+    <string name="select_recipient_title_selecting">Select Recipient</string>
+    <string name="select_recipient_title_ready">Ready to Send</string>
+    <string name="select_recipient_back_desc">Back</string>
+    <string name="select_recipient_add_recipient">Add Recipient</string>
+    <string name="select_recipient_hint_add_recipient">Click on the button below.</string>
+    <string name="select_recipient_send_hint">Tap send if everything looks good.</string>
+    <!-- Return-address corner (top-left of envelope) — dummy placeholder,
+         no user profile/auth system exists yet. -->
+    <string name="select_recipient_sender_name">Nio Zini</string>
+    <string name="select_recipient_sender_country">Indonesia</string>
+    <string name="select_recipient_penpal_in_region">A Penpal in %1$s</string>
+    <string name="select_recipient_known_recipient">Replying to %1$s</string>
+    <string name="select_recipient_to_recipient">To %1$s</string>
+    <string name="select_recipient_next">Next</string>
+    <string name="recipient_picker_title">Select Recipient</string>
+    <string name="recipient_picker_tab_regions">By Region</string>
+    <string name="recipient_picker_tab_address_book">Address Book</string>
+    <string name="recipient_picker_regions_subtitle">Choose a continent to send your letter to a random new penpal</string>
+    <string name="recipient_picker_address_book_subtitle">Choose a friend from your saved penpal address book</string>
+    <string name="recipient_picker_address_book_empty_title">No Contacts Yet</string>
+    <string name="recipient_picker_address_book_empty_body">Add penpal contacts from their public profiles to write directly to them.</string>
+
+    <!-- Add Recipient menu (EnvelopeCard.kt) -->
+    <string name="add_recipient_share_contact">Share Contact</string>
+    <string name="add_recipient_penpals">Penpals around the world</string>
+
+    <!-- Letter Sent confirmation (LetterSentScreen.kt) -->
+    <string name="letter_sent_title">On Its Way!</string>
+    <string name="letter_sent_body">Peny\'s off delivering your letter, waddling as fast as those little feet go! 🐧</string>
+    <string name="letter_sent_cta">Back to PenPal Feed</string>
+    <string name="letter_sent_write_new_cta">Write Another Letter</string>
+    <string name="letter_sent_view_profile_cta">View in My Postal Collection</string>
+    <string name="letter_sent_share_cta">Share</string>
+
+    <!-- Letter Delivery Tracking (DeliveryTrackingScreen.kt / DeliveryRouteMap.kt) -->
+    <string name="letter_tracking_title">Tracking Letter</string>
+    <string name="letter_tracking_route_label">%1$s → %2$s</string>
+    <string name="letter_tracking_sent_label">Sent: %1$s</string>
+    <string name="letter_tracking_eta_label">Estimated arrival: %1$s</string>
+    <string name="letter_tracking_progress_percent">%1$d%%</string>
+    <string name="letter_tracking_delivered_label">Delivered!</string>
+    <string name="letter_tracking_flavor_walk_0">Peny just set off, full of energy! 🚶</string>
+    <string name="letter_tracking_flavor_walk_20">Walking along, letter tucked under a wing, humming a tune</string>
+    <string name="letter_tracking_flavor_walk_50">Halfway there — Peny stops for iced tea ☕</string>
+    <string name="letter_tracking_flavor_walk_80">Almost there! Peny can already see the street 👀</string>
+    <string name="letter_tracking_flavor_swim_0">Peny dives in, letter held high and dry, bon voyage! 🏊</string>
+    <string name="letter_tracking_flavor_swim_20">Paddling along, steady strokes across calm water</string>
+    <string name="letter_tracking_flavor_swim_40">The waves picked up a bit — Peny\'s getting a little tired 🥱</string>
+    <string name="letter_tracking_flavor_swim_60">Land is visible in the distance!</string>
+    <string name="letter_tracking_flavor_swim_80">Washed up on the shore, almost there! 🏖</string>
+    <string name="letter_tracking_transport_walk_desc">On foot</string>
+    <string name="letter_tracking_transport_swim_desc">By swimming</string>
+    <string name="letter_tracking_caption_passing_through">Passing through %1$s</string>
+    <string name="letter_tracking_boost_cta">Feed Peny to speed up</string>
+    <string name="letter_tracking_boost_energy_balance">You have %1$d energy</string>
+    <string name="letter_tracking_boost_confirm_title">Speed up this letter?</string>
+    <string name="letter_tracking_boost_confirm_body">Feeding Peny spends some of your energy to deliver this letter right now, instead of waiting.</string>
+    <string name="letter_tracking_boost_confirm_cta">Feed Peny</string>
+    <string name="letter_tracking_boost_confirm_cancel">Not yet</string>
+    <string name="letter_tracking_boost_insufficient_title">Peny\'s Out of Energy!</string>
+    <string name="letter_tracking_boost_insufficient_cta">Get More Energy</string>
+    <string name="letter_tracking_boost_success_toast">Delivered! %1$d energy left</string>
+    <string name="letter_tracking_privacy_badge">Estimated Route · Privacy Protected</string>
+    <string name="letter_tracking_privacy_shield_desc">Privacy Protected</string>
+    <string name="letter_tracking_privacy_dialog_title">Penpal Location Privacy</string>
+    <string name="letter_tracking_privacy_dialog_body">To protect your privacy and your penpal\'s, PenyPost never accesses your device\'s GPS location.\n\nRoutes on this map are illustrated using representative regional and continental points so your location privacy stays 100% protected.</string>
+    <string name="letter_tracking_privacy_dialog_cta">Got it</string>
+    <string name="letter_tracking_map_load_failed">Oops, the map couldn\'t load on this device. Your letter is still on its way! 🐧</string>
+    <string name="letter_tracking_celebration_badge">✨ Letter Arrived! ✨</string>
+    <string name="letter_tracking_celebration_title">Peny Delivered Your Letter!</string>
+    <string name="letter_tracking_celebration_body_named">Letter from %1$s has arrived in your mailbox. Tap the envelope to open it!</string>
+    <string name="letter_tracking_celebration_body_generic">Your penpal\'s letter has arrived in your mailbox. Tap the envelope to open it!</string>
+    <string name="letter_tracking_celebration_envelope_desc">Letter Envelope</string>
+    <string name="letter_tracking_celebration_tap_hint">Tap to Open</string>
+    <string name="letter_tracking_celebration_cta_open">Open Letter Now</string>
+    <string name="letter_tracking_celebration_cta_back">Back to Conversation</string>
+    <string-array name="letter_tracking_ocean_captions">
+        <item>Swimming through open water 🌊</item>
+        <item>Peny just passed a little school of fish</item>
+        <item>The waves are a bit much, but Peny\'s got this!</item>
+        <item>The water\'s so blue today</item>
+        <item>Ducking under for a quick breather</item>
+    </string-array>
+    <string name="mailbox_in_transit_badge">In Transit</string>
+    <string name="mailbox_outgoing_tracking_title">On its way to %1$s</string>
+    <string name="mailbox_outgoing_tracking_cta">Track</string>
+    <string name="mailbox_outgoing_dialog_title">Letter in Transit</string>
+    <string name="mailbox_outgoing_dialog_body">Your letter is on its way to %1$s. Would you like to re-read your letter or track its delivery on the map?</string>
+    <string name="mailbox_outgoing_dialog_cta_read">Read Letter</string>
+    <string name="mailbox_outgoing_dialog_cta_track">Track Delivery</string>
+
+    <!-- Region Picker (RegionPickerSheet.kt) -->
+    <string name="region_picker_title">Penpals around the world</string>
+    <string name="region_picker_penpal_count">~%1$d potential penpals</string>
+    <string name="region_picker_penpal_count_many">100+ potential penpals</string>
+    <string name="region_picker_penpal_count_few">Penpals ready to connect</string>
+    <string name="penpal_region_africa">Africa</string>
+    <string name="penpal_region_antarctica">Antarctica</string>
+    <string name="penpal_region_asia">Asia</string>
+    <string name="penpal_region_europe">Europe</string>
+    <string name="penpal_region_north_america">North America</string>
+    <string name="penpal_region_oceania">Oceania</string>
+    <string name="penpal_region_south_america">South America</string>
+
+    <!-- Envelope Picker (EnvelopePickerSheet.kt) -->
+    <string name="envelope_picker_title">Change Envelope</string>
+    <string name="envelope_thumbnail_desc">Envelope design %1$d</string>
+
+    <!-- Stamp Picker (StampPickerSheet.kt) -->
+    <string name="stamp_picker_title">Select Stamps</string>
+    <string name="stamp_picker_subtitle">Tap or drag to place stamps</string>
+    <string name="stamp_design_rose">Rose</string>
+    <string name="stamp_design_ocean">Ocean</string>
+    <string name="stamp_design_marigold">Marigold</string>
+    <string name="stamp_design_sage">Sage</string>
+    <string name="stamp_design_plum">Plum</string>
+    <string name="stamp_design_ink">Ink</string>
+    <string name="stamp_picker_selected_desc">Selected</string>
+
+    <!-- Sticker Picker (StickerPickerOverlay.kt) -->
+    <string name="sticker_picker_title">Add a Sticker</string>
+    <string name="sticker_picker_subtitle">Tap to place, tap again to remove</string>
+    <string name="sticker_picker_selected_desc">Selected</string>
+    <string name="sticker_picker_remove_desc">Remove sticker</string>
+
+    <!-- Envelope Edit Toolbar (EnvelopeEditToolbar.kt) -->
+    <string name="envelope_edit_text_desc">Text</string>
+    <string name="envelope_edit_envelope_desc">Envelope</string>
+    <string name="envelope_edit_sticker_desc">Put Sticker</string>
+    <string name="envelope_edit_stamp_desc">Stamp</string>
+
+    <!-- Send success (SendSuccessOverlay.kt) -->
+    <string name="send_success_message">Sent!</string>
+
+    <!-- PenPals (PenPalsScreen.kt / OpenLetterOverlay.kt) -->
+    <string name="nav_penpals">PenPals</string>
+    <string name="penpals_greeting_hello">Hi, %1$s! 👋</string>
+    <string name="penpals_greeting_guest_name">Guest</string>
+    <string name="penpals_greeting_default_title">Ready to Slide In Today? 🐧</string>
+    <string name="penpals_greeting_default_body">Peny\'s all geared up. Where should we send a letter today?</string>
+    <string name="penpals_avatar_desc">Profile</string>
+    <string name="penpals_card_region_label">A Penpal in %1$s</string>
+    <string name="penpals_view_mode_grid_desc">Grid view</string>
+    <string name="penpals_view_mode_loose_desk_desc">Loose desk view</string>
+    <string name="penpals_refresh_card_title">Meaningful Connections, Not Doomscrolling 💌</string>
+    <string name="penpals_refresh_card_subtitle">A new stack lands tomorrow — or reroll today\'s now with a bit of energy.</string>
+    <string name="penpals_refresh_card_icon_desc">Refresh stack</string>
+    <string name="penpals_refresh_sheet_title">🐧 Want Fresh Letters Now?</string>
+    <string name="penpals_refresh_sheet_body">Reroll today\'s stack early for %1$d energy. Your balance: %2$d ⚡</string>
+    <string name="penpals_refresh_sheet_cta_confirm">Refresh Now (%1$d ⚡)</string>
+    <string name="penpals_refresh_sheet_cta_dismiss">Wait for Tomorrow\'s Mail</string>
+    <string name="penpals_refresh_success_toast">Stack refreshed! 🐧</string>
+    <string name="open_letter_close_desc">Close</string>
+    <string name="open_letter_like_desc">Like</string>
+    <string name="open_letter_comment_desc">Comment</string>
+    <string name="open_letter_bookmark_desc">Bookmark</string>
+    <string name="open_letter_share_desc">Share</string>
+    <string name="open_letter_more_desc">More</string>
+    <string name="open_letter_posted_on">Posted on %1$s</string>
+
+    <!-- Mailbox Screen (screen/MailboxScreen.kt) -->
+    <string name="mailbox_title">Mailbox</string>
+    <string name="mailbox_stamp_desc">Stamp from %1$s</string>
+    <string name="mailbox_empty_label">No conversations yet</string>
+    <string name="mailbox_correspondent_country">%1$s · %2$s</string>
+    <string name="mailbox_unread_dot_desc">Unread</string>
+
+    <!-- Open Letter Screen (OpenLetterScreen.kt) -->
+    <string name="open_letter_back_desc">Back</string>
+    <string name="open_letter_report_user">Report User</string>
+    <string name="open_letter_add_friend">Add Friend</string>
+    <string name="open_letter_block_user">Block User</string>
+    <string name="open_letter_unblock_user">Unblock User</string>
+    <string name="mailbox_thread_blocked_banner_text">You have blocked %1$s. You cannot exchange letters with each other.</string>
+    <string name="mailbox_thread_unblock_cta">Unblock</string>
+    <string name="block_user_unblocked_toast">User unblocked.</string>
+    <string name="open_letter_incoming_mail_title">Incoming Mail</string>
+    <string name="open_letter_expected_delivery">Expected delivery %1$s</string>
+    <string name="open_letter_open_early">Open Early</string>
+    <string name="open_letter_write_letter">Write Letter</string>
+    <string name="open_letter_continue_writing">Continue Writing</string>
+    <string name="open_letter_envelope_icon_desc">Envelope</string>
+    <string name="open_letter_paper_icon_desc">Letter opened</string>
+    <string name="mailbox_full_view_envelope_desc">View envelope full screen</string>
+    <string name="mailbox_full_view_letter_desc">View letter full screen</string>
+
+    <!-- Open Letter Overlay — PenPals more-menu & reply-confirm (OpenLetterOverlay.kt) -->
+    <string name="open_letter_menu_start_conversation">Start Conversation</string>
+    <string name="open_letter_menu_view_profile">View Profile</string>
+    <string name="open_letter_menu_share_mail">Share Mail</string>
+    <string name="open_letter_menu_report_mail">Report Mail</string>
+    <string name="open_letter_share_text">Check out this warm letter from %1$s on PenyPost! ✉️\n\n\"%2$s\"</string>
+    <string name="open_letter_share_chooser_title">Share Letter</string>
+
+    <!-- Share Letter Sheet (widgets/ShareLetterSheet.kt) -->
+    <string name="share_letter_sheet_title">Share this letter</string>
+    <string name="share_letter_target_instagram">Instagram</string>
+    <string name="share_letter_target_whatsapp">WhatsApp</string>
+    <string name="share_letter_target_save">Save Image</string>
+    <string name="share_letter_target_more">More</string>
+    <string name="share_letter_saved_toast">Saved to your gallery</string>
+    <string name="share_letter_saved_snackbar_action">View</string>
+    <string name="share_letter_save_failed_toast">Couldn\'t save image</string>
+    <string name="share_letter_app_unavailable">That app isn\'t installed</string>
+    <string name="share_letter_storage_permission_denied">Storage permission needed to save photos</string>
+    <string name="share_letter_device_unsupported">Sharing this letter needs a bit more phone power to stay crisp on your device</string>
+
+    <!-- Bookmarks (BookmarksBottomSheet.kt, BookmarksViewModel.kt) -->
+    <string name="open_letter_bookmark_saved_snackbar">Letter saved</string>
+    <string name="open_letter_bookmark_removed_snackbar">Removed from saved letters</string>
+    <string name="open_letter_bookmark_view_action">View</string>
+    <string name="bookmarks_sheet_title">Saved Letters</string>
+    <string name="bookmarks_sheet_select">Select</string>
+    <string name="bookmarks_sheet_cancel">Cancel</string>
+    <string name="bookmarks_sheet_empty_title">No saved letters yet</string>
+    <string name="bookmarks_sheet_empty_subtitle">Tap the bookmark icon while reading a letter to save it here.</string>
+    <string name="bookmarks_sheet_remove_selected">Remove (%1$d)</string>
+    <string name="bookmarks_remove_confirm_title">Remove saved letters?</string>
+    <string name="bookmarks_remove_confirm_body">This only removes them from your saved list — the letters themselves aren\'t deleted.</string>
+    <string name="bookmarks_remove_confirm_cta">Remove</string>
+    <string name="bookmarks_remove_confirm_cancel">Cancel</string>
+    <string name="reply_confirm_dialog_title">Start a Conversation? 💌</string>
+    <string name="reply_confirm_dialog_body">Tap Reply to start chatting with %1$s! This letter will land in your inbox too, so it\'s easy to keep track.</string>
+    <string name="reply_confirm_dialog_cta_start">Yes, Reply Now!</string>
+    <string name="reply_confirm_dialog_cta_cancel">Not Yet</string>
+
+    <!-- Report Mail Dialog (ui/components/ReportMailDialog.kt) -->
+    <string name="report_mail_dialog_title">Report This Letter</string>
+    <string name="report_mail_dialog_body">Let Peny know why this letter felt off. Our team will review your report, and it\'ll disappear from your feed right away.</string>
+    <string name="report_mail_note_label">Tell us more (optional)</string>
+    <string name="report_mail_cta_submit">Send Report</string>
+    <string name="report_mail_cta_cancel">Cancel</string>
+    <string name="report_reason_spam">Spam</string>
+    <string name="report_reason_harassment">Harassment</string>
+    <string name="report_reason_inappropriate_content">Inappropriate Content</string>
+    <string name="report_reason_empty_mail">Empty Mail</string>
+    <string name="report_reason_underage">Underage User</string>
+    <string name="report_reason_impersonation">Impersonation</string>
+    <string name="report_reason_other">Other</string>
+    <string name="error_report_letter">Oops, your report didn\'t go through. Give it another try!</string>
+
+    <!-- Report User Dialog (reuses ui/components/ReportMailDialog.kt via titleRes/bodyRes) -->
+    <string name="report_user_dialog_title">Report This User</string>
+    <string name="report_user_dialog_body">Let Peny know why this profile felt off. Our team will review your report.</string>
+    <string name="error_report_user">Oops, your report didn\'t go through. Give it another try!</string>
+
+    <!-- Block User confirm dialog (Inbox/PublicProfile/PenPals — docs/be/trust_and_safety_api.md §2) -->
+    <string name="block_user_confirm_dialog_title">Block %1$s?</string>
+    <string name="block_user_confirm_dialog_body">You won\'t be able to send letters to each other or see each other\'s profile.</string>
+    <string name="block_user_confirm_dialog_cta_confirm">Block</string>
+    <string name="block_user_confirm_dialog_cta_cancel">Cancel</string>
+    <string name="block_user_blocked_toast">User blocked.</string>
+    <string name="error_block_user">Oops, that block didn\'t go through. Give it another try!</string>
+    <string name="error_unblock_user">Oops, that unblock didn\'t go through. Give it another try!</string>
+    <string name="error_blocked_users_load">Failed to load blocked users.</string>
+
+    <string name="stamps_screen_title">Shop &amp; Rewards</string>
+    <string name="stamps_screen_section_claim_rewards">Daily Check-In</string>
+    <string name="stamps_screen_section_buy_stamps">Buy Stamps</string>
+    <string name="stamps_screen_section_buy_paper">Buy Paper</string>
+    <string name="stamps_screen_section_subscribe">Subscribe</string>
+    <string name="stamps_screen_section_supporter_club">Supporter Club</string>
+
+    <string name="stamps_streak_header">%1$d-Day Streak</string>
+    <string name="stamps_streak_subtitle">Check in daily to collect Energy &amp; rare Stamps!</string>
+    <string name="stamps_claim_daily_cta">Claim Today (+%1$d Energy)</string>
+    <string name="stamps_claimed_today_label">Claimed Today ✓</string>
+    <string name="stamps_next_claim_in">Next claim in %1$s</string>
+    <string name="stamps_next_claim_available_now">Available now!</string>
+    <string name="stamps_day_label">Day %1$d</string>
+    <string name="stamps_day_7_grand_reward">Grand Reward</string>
+    <string name="stamps_quests_section_title">Daily Quests</string>
+    <string name="stamps_quest_claim_cta">Claim</string>
+    <string name="stamps_quest_claimed_label">Done</string>
+    <!-- InviteFriendsPromoCard.kt — always-visible entry point into Invite Friends, not a claimable quest row -->
+    <string name="stamps_invite_promo_title">Invite &amp; Earn +30 Energy! ⚡</string>
+    <string name="stamps_invite_promo_body">The moment your friend sends their first letter, you get +30 Energy and they get +15 to get started 💌</string>
+    <string name="stamps_user_energy_label">Peny\'s Energy</string>
+    <string name="stamps_claim_celebration_title">Reward Claimed!</string>
+    <string name="stamps_claim_celebration_body">You received +%1$d Energy. Keep your streak going!</string>
+    <string name="stamps_milestone_dialog_title">Day %1$d Reward</string>
+    <string name="stamps_milestone_day3_item">Bonus: Golden Wax Seal 🌟</string>
+    <string name="stamps_milestone_day7_item">Grand Prize: Rare Peny Stamp 👑</string>
+    <string name="stamps_milestone_status_claimed">Claimed ✓</string>
+    <string name="stamps_milestone_status_available">Available Today! Tap button below to claim.</string>
+    <string name="stamps_milestone_status_locked">Locked · Keep your streak going tomorrow.</string>
+    <string name="stamps_milestone_close">Close</string>
+
+    <string name="stamps_screen_back_desc">Back</string>
+    <string name="stamps_screen_reward_daily_title">Daily Stamp</string>
+    <string name="stamps_screen_reward_daily_subtitle">Come back tomorrow for another free stamp.</string>
+    <string name="stamps_screen_reward_claim_cta">Claim</string>
+    <string name="stamps_screen_reward_claimed_label">Claimed</string>
+
+    <string name="stamps_screen_pack_starter_title">Rose Pack</string>
+    <string name="stamps_screen_pack_starter_subtitle">5 stamps · %1$s</string>
+    <string name="stamps_screen_pack_ocean_title">Ocean Pack</string>
+    <string name="stamps_screen_pack_ocean_subtitle">5 stamps · %1$s</string>
+    <string name="stamps_screen_pack_marigold_title">Marigold Pack</string>
+    <string name="stamps_screen_pack_marigold_subtitle">5 stamps · %1$s</string>
+    <string name="stamps_screen_pack_sage_title">Sage Pack</string>
+    <string name="stamps_screen_pack_sage_subtitle">5 stamps · %1$s</string>
+    <string name="stamps_screen_pack_plum_title">Plum Pack</string>
+    <string name="stamps_screen_pack_plum_subtitle">5 stamps · %1$s</string>
+    <string name="stamps_screen_pack_ink_title">Ink Pack</string>
+    <string name="stamps_screen_pack_ink_subtitle">5 stamps · %1$s</string>
+
+    <string name="stamps_screen_paper_grid_title">Grid Paper</string>
+    <string name="stamps_screen_paper_grid_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_lined_title">Lined Paper</string>
+    <string name="stamps_screen_paper_lined_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_indigo_title">Indigo Paper</string>
+    <string name="stamps_screen_paper_indigo_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_aged_kraft_title">Aged Kraft Paper</string>
+    <string name="stamps_screen_paper_aged_kraft_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_soft_beige_title">Soft Beige Paper</string>
+    <string name="stamps_screen_paper_soft_beige_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_dotted_title">Dotted Paper</string>
+    <string name="stamps_screen_paper_dotted_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_plain_white_title">Plain White Paper</string>
+    <string name="stamps_screen_paper_plain_white_subtitle">10 sheets · %1$s</string>
+    <string name="stamps_screen_paper_blush_marble_title">Blush Marble Paper</string>
+    <string name="stamps_screen_paper_blush_marble_subtitle">10 sheets · %1$s</string>
+
+    <string name="stamps_screen_plan_monthly_title">Peny Premium</string>
+    <string name="stamps_screen_plan_monthly_subtitle">Unlimited penpals, exclusive envelopes, and no ads.</string>
+    <string name="stamps_screen_plan_subscribe_cta">Subscribe</string>
+
+    <string name="stamps_screen_supporter_club_title">Peny Supporter</string>
+    <string name="stamps_screen_supporter_club_subtitle">Back Peny directly and get a supporter badge on your profile.</string>
+
+    <string name="stamps_screen_coming_soon_buy_stamps">Buy Stamps</string>
+    <string name="stamps_screen_coming_soon_buy_paper">Buy Paper</string>
+    <string name="stamps_screen_coming_soon_subscribe">Subscribe</string>
+    <string name="stamps_screen_coming_soon_supporter_club">Supporter Club</string>
+
+    <string name="stamps_screen_tab_hadiah">Rewards</string>
+    <string name="stamps_screen_tab_energi">Energy</string>
+    <string name="stamps_screen_tab_store">Shop</string>
+
+    <!-- Peny Store: Filter chips -->
+    <string name="store_filter_all">All</string>
+    <string name="store_filter_prangko">Stamps</string>
+    <string name="store_filter_kertas">Paper</string>
+    <string name="store_filter_stiker">Stickers</string>
+    <string name="store_filter_amplop">Envelopes</string>
+    <string name="store_filter_bundle">Bundle</string>
+
+    <!-- Peny Store: Labels & UI copy -->
+    <string name="store_detail_assets_preview">What\'s Inside</string>
+    <string name="store_likes_label">likes</string>
+    <string name="store_cta_buy">Buy — %1$s</string>
+    <string name="store_cta_owned">Owned ✓</string>
+    <string name="store_view_external_link">Visit Profile</string>
+    <string name="store_error_open_link">Could not open profile link</string>
+    <string name="store_error_load_failed">Failed to load store. Please try again.</string>
+    <string name="store_empty_catalog">No products available yet.\nStay tuned for our creators\' first collection!</string>
+    <string name="store_purchase_success_title">A Lovely Addition to Your Desk</string>
+    <string name="store_purchase_success_body">Thank you for supporting this creator! This handcrafted piece is now tucked safely in your desk drawer, ready to accompany your heartfelt letters to penpals near and far.</string>
+    <string name="store_purchase_celebration_badge">✨ NEW PIECE FOR YOUR COLLECTION</string>
+    <string name="store_purchase_celebration_keep_cta">Tuck into My Desk</string>
+    <string name="store_purchase_celebration_explore_cta">Explore More Collectibles</string>
+    <string name="error_store_purchase_failed">Purchase failed. Please try again.</string>
+    <string name="store_by_creator">by %1$s</string>
+    <string name="store_badge_stamps_count">🎟 %1$d Stamps</string>
+    <string name="store_badge_stickers_count">✨ %1$d Stickers</string>
+    <string name="store_badge_paper_count">📄 %1$d Paper</string>
+    <string name="store_badge_envelopes_count">✉️ %1$d Envelopes</string>
+    <string name="stamps_energy_store_title">Charge Up Peny\'s Energy</string>
+    <string name="stamps_energy_store_body">Energy keeps Peny\'s little magic tricks running. Here\'s what it unlocks:</string>
+    <string name="stamps_energy_store_benefit_delivery_title">Instant Letter Delivery</string>
+    <string name="stamps_energy_store_benefit_delivery_body">Skip the slide across the ice — open your penpal\'s letter the moment it lands.</string>
+    <string name="stamps_energy_store_benefit_peny_title">Peny\'s Magic Reply Book</string>
+    <string name="stamps_energy_store_benefit_peny_body">Stuck on what to say? Let Peny help write your reply.</string>
+    <string name="stamps_energy_store_benefit_shop_title">Stamps &amp; Pretty Paper</string>
+    <string name="stamps_energy_store_benefit_shop_body">Trade Energy for one-of-a-kind stamps and lovely letter paper.</string>
+    <string name="stamps_energy_store_cta">Charge Up Energy</string>
+
+    <!-- Profile (ProfileScreen.kt + ui/screens/profile/) -->
+    <string name="profile_screen_title">Profile</string>
+    <string name="profile_menu_draft">Draft</string>
+    <string name="profile_menu_address_book">Address Book</string>
+    <string name="profile_menu_stamp_book">Stamp Book</string>
+    <string name="profile_menu_tips">Tips</string>
+    <string name="profile_menu_settings">Settings</string>
+    <string name="profile_back_desc">Back</string>
+
+    <string name="profile_draft_title">Draft</string>
+
+    <string name="profile_address_book_title">Address Book</string>
+    <string name="profile_address_book_empty_title">No Contacts Yet</string>
+    <string name="profile_address_book_empty_body">Penpal contacts you add from their public profile will appear here.</string>
+    <string name="profile_address_book_delete_dialog_title">Remove Contact</string>
+    <string name="profile_address_book_delete_dialog_body">Are you sure you want to remove %1$s from your address book?</string>
+    <string name="profile_address_book_delete_confirm_cta">Remove</string>
+    <string name="profile_address_book_delete_cancel_cta">Cancel</string>
+    <string name="profile_address_book_load_error">Failed to load address book. Please try again.</string>
+    <string name="profile_address_book_delete_error">Failed to remove contact. Please try again.</string>
+
+    <string name="profile_invite_title">Invite Friends</string>
+    <string name="profile_invite_section_share_title">Your Invite Code</string>
+    <string name="profile_invite_section_share_body">Share your code or link — once your friend sends their first letter, you both get bonus energy: +30 for you, +15 for them 🎁</string>
+    <string name="profile_invite_copy_cta">Copy</string>
+    <string name="profile_invite_copy_success">Code copied!</string>
+    <string name="profile_invite_share_cta">Share</string>
+    <string name="profile_invite_share_message">Come write letters with me on PenyPost ✉️ Use my code %1$s or tap: %2$s</string>
+    <string name="profile_invite_share_chooser_title">Share invite via</string>
+    <string name="profile_invite_generate_retry_cta">Retry</string>
+    <string name="profile_invite_section_redeem_title">Have a Friend\'s Invite Code?</string>
+    <string name="profile_invite_section_redeem_body">Enter it below to connect with them instantly.</string>
+    <string name="profile_invite_redeem_label">Invite code</string>
+    <string name="profile_invite_redeem_placeholder">e.g. K7XQ2A</string>
+    <string name="profile_invite_redeem_cta">Add Friend</string>
+    <string name="profile_invite_redeem_success_title">You\'re Connected! 💌</string>
+    <string name="profile_invite_redeem_success_body">You and %1$s are now in each other\'s address book.</string>
+    <string name="profile_invite_redeem_success_cta">Nice!</string>
+
+    <string name="profile_stamp_book_title">Stamp Book</string>
+    <string name="profile_stamp_book_locked_desc">Locked</string>
+
+    <string name="profile_keepsake_title">Snail Mail Keepsakes</string>
+    <string name="profile_keepsake_subtitle">Your collection of stamps, letter papers, envelopes, and stickers</string>
+    <string name="profile_keepsake_badge">Stationery Album</string>
+    <string name="profile_keepsake_quote">Every stamp, paper, and sticker holds a heartfelt memory of slow mail.</string>
+    <string name="profile_keepsake_tab_all">All</string>
+    <string name="profile_keepsake_tab_stamps">Stamps</string>
+    <string name="profile_keepsake_tab_papers">Papers</string>
+    <string name="profile_keepsake_tab_stickers">Stickers</string>
+    <string name="profile_keepsake_tab_envelopes">Envelopes</string>
+    <string name="profile_keepsake_empty_title">Your keepsake album is empty</string>
+    <string name="profile_keepsake_empty_body">Explore Peny Store to collect handcrafted stamps, vintage papers, envelopes, and stickers from indie creators!</string>
+    <string name="profile_keepsake_empty_cta">Explore Peny Store</string>
+    <string name="profile_keepsake_inspect_title">Collectible Details</string>
+    <string name="profile_keepsake_inspect_close">Close</string>
+    <string name="profile_keepsake_creator_credit">Crafted by %1$s</string>
+    <string name="profile_keepsake_unlocked_date">Collected on %1$s</string>
+    <string name="profile_keepsake_official_badge">Official Peny Store Item</string>
+    <string name="profile_keepsake_retry">Retry</string>
+    <string name="profile_keepsake_meta_creator">Creator</string>
+    <string name="profile_keepsake_meta_collected">Collected</string>
+    <string name="profile_keepsake_meta_type">Type</string>
+    <string name="profile_keepsake_type_stamp">Stamp</string>
+    <string name="profile_keepsake_type_paper">Letter Paper</string>
+    <string name="profile_keepsake_type_sticker">Sticker</string>
+    <string name="profile_keepsake_type_envelope">Envelope</string>
+
+    <!-- App Update (AppUpdateDialog.kt / AppUpdateViewModel.kt) -->
+    <string name="app_update_mandatory_title">Update Required</string>
+    <string name="app_update_mandatory_body">A newer version of PenyPost is required to keep exchanging letters. Please update now to continue your journey!</string>
+    <string name="app_update_optional_title">New Update Available! 🐧</string>
+    <string name="app_update_optional_body">A fresh version of PenyPost is here with lovely new features and improvements. Would you like to update now?</string>
+    <string name="app_update_cta">Update Now</string>
+    <string name="app_update_later">Later</string>
+    <string name="app_update_downloaded_message">Update downloaded and ready to install!</string>
+    <string name="app_update_downloaded_action">Restart</string>
+
+    <string name="profile_tips_title">Tips &amp; Guides</string>
+    <string name="profile_tips_delivery_time_title">How slow mail delivery works</string>
+    <string name="profile_tips_delivery_time_body">PenyPost simulates real-world postal travel! Letter delivery time is calculated based on geographic distance between countries. A letter sent across oceans takes a few hours to arrive, bringing back the heartwarming anticipation of real slow mail.</string>
+    <string name="profile_tips_first_letter_title">Writing your first letter</string>
+    <string name="profile_tips_first_letter_body">Pick a penpal, choose a cozy paper, and introduce yourself from the heart! Share your daily life, hobbies, or local culture — genuine stories build deep, lasting bonds.</string>
+    <string name="profile_tips_customize_letter_title">Decorating &amp; crafting letters</string>
+    <string name="profile_tips_customize_letter_body">Make your letters unique with custom paper templates, aesthetic typography, handwritten doodles, and stickers. Tap the canvas tools while composing to express yourself.</string>
+    <string name="profile_tips_drafts_title">Auto-saved drafts</string>
+    <string name="profile_tips_drafts_body">Take your time writing long and heartfelt letters. Your work is automatically saved as a draft so you can always pick up right where you left off.</string>
+    <string name="profile_tips_stamps_title">How do stamps work?</string>
+    <string name="profile_tips_stamps_body">Every letter you send uses one stamp from your collection. Claim daily free stamps or collect unique regional and themed stamps to complete your Stamp Album.</string>
+    <string name="profile_tips_penpals_title">Finding like-minded penpals</string>
+    <string name="profile_tips_penpals_body">Browse the PenPals tab and filter by continent, language, and shared interests to discover wonderful friends with common hobbies from across the globe.</string>
+    <string name="profile_tips_postal_collection_title">Postal Collection Showcase</string>
+    <string name="profile_tips_postal_collection_body">Showcase your favorite received letters and beautiful envelopes on your public profile. You can easily toggle showcase visibility anytime from your profile or letter viewer.</string>
+    <string name="profile_tips_delivery_hours_title">Custom delivery quiet hours</string>
+    <string name="profile_tips_delivery_hours_body">In Profile Settings, set your preferred daily letter delivery hour so incoming letters arrive during your favorite cozy reading time.</string>
+    <string name="profile_tips_sign_in_title">Why sign in?</string>
+    <string name="profile_tips_sign_in_body">Signing in protects your penpals, letter archives, drafts, and stamp collections so everything stays safe even when switching devices.</string>
+    <string name="profile_tips_safety_title">Staying safe &amp; kind</string>
+    <string name="profile_tips_safety_body">Protect your privacy. Never share your exact home address, phone numbers, or passwords. If you ever receive inappropriate letters, you can block or report the user immediately.</string>
+    <string name="profile_tips_envelope_quality_title">Why does my envelope look softer sometimes?</string>
+    <string name="profile_tips_envelope_quality_body">To preserve your stamp, sticker, and paper design exactly as you made them, we capture your envelope as an image when you hit Send. On some lower-end devices, that snapshot can come out a little softer than what you saw while decorating — that\'s expected, not a bug, and your letter still sends just fine.</string>
+
+    <!-- Profile content (ui/screens/profile/widgets/ProfileWidgets.kt) -->
+    <string name="profile_content_pass_title">PenyPost</string>
+    <string name="profile_content_settings_desc">Settings</string>
+    <string name="profile_content_default_nickname">Penpal User</string>
+    <string name="profile_content_verified_desc">Verified</string>
+    <string name="profile_content_age_years">%1$d yrs</string>
+    <string name="profile_content_interests_label">INTERESTS</string>
+    <string name="profile_content_languages_label">LANGUAGES</string>
+    <string name="profile_content_postal_collection_label">POSTAL COLLECTION</string>
+    <string name="profile_content_tab_envelopes">Envelope</string>
+    <string name="profile_content_tab_paper">Paper</string>
+    <string name="profile_content_stat_drafts_title">Drafts</string>
+    <string name="profile_content_stat_drafts_subtitle">Manage</string>
+    <string name="profile_content_stat_address_book_subtitle">Saved</string>
+    <string name="profile_content_stat_stamp_book_subtitle">Collection</string>
+    <string name="profile_content_invite_title">Invite Friends</string>
+    <string name="profile_content_invite_subtitle">Get a code, connect instantly</string>
+    <string name="profile_content_tips_title">Penpal Tips &amp; Safety</string>
+    <string name="profile_content_tips_subtitle">Learn how to write meaningful letters safely</string>
+    <string name="profile_content_postal_collection_empty">Letters you make public will show up here — turn on \"Show in Postal Collection\" when writing one.</string>
+    <string name="profile_update_photo_desc">Update Profile Photo</string>
+    <string name="profile_photo_updated_success">Profile photo updated successfully</string>
+    <string name="profile_content_showcase_more_desc">More options</string>
+    <string name="profile_content_showcase_no_preview_desc">Why no preview image?</string>
+    <string name="profile_content_showcase_no_preview_caption">Why text, not a picture?</string>
+    <string name="profile_content_showcase_pause">Pause</string>
+    <string name="profile_content_showcase_reactivate">Reactivate Letter</string>
+    <string name="profile_content_showcase_delete">Delete</string>
+    <string name="profile_content_showcase_pause_dialog_title">Pause this letter?</string>
+    <string name="profile_content_showcase_pause_dialog_body">It\'ll disappear from your Postal Collection until you reactivate it — the letter itself isn\'t affected.</string>
+    <string name="profile_content_showcase_pause_dialog_confirm">Pause</string>
+    <string name="profile_content_showcase_pause_dialog_cancel">Cancel</string>
+    <string name="profile_content_showcase_reactivate_dialog_title">Show this letter again?</string>
+    <string name="profile_content_showcase_reactivate_dialog_body">It\'ll reappear in your Postal Collection, visible to anyone who views your profile.</string>
+    <string name="profile_content_showcase_reactivate_dialog_confirm">Reactivate</string>
+    <string name="profile_content_showcase_reactivate_dialog_cancel">Cancel</string>
+
+    <string name="profile_settings_title">Settings</string>
+    <string name="profile_settings_subscription">Subscription</string>
+    <string name="profile_settings_cache">Cache</string>
+    <string name="profile_settings_cache_size">%1$s used</string>
+    <string name="profile_settings_language">Language</string>
+    <string name="profile_settings_notify_hour">Daily Letters Time</string>
+    <string name="profile_settings_notify_hour_picker_title">When do you want new letters?</string>
+    <string name="profile_settings_notify_hour_picker_subtitle">We\'ll drop a fresh stack around this time each day.</string>
+    <string name="language_picker_title">Choose Language</string>
+    <string name="language_picker_subtitle">Select your preferred app language</string>
+    <string name="profile_settings_contact_us">Contact Us</string>
+    <string name="profile_settings_contact_us_email_subject">Hello PenyPost team!</string>
+    <string name="profile_settings_contact_us_no_email_app">No email app found</string>
+    <string name="profile_settings_privacy_policy">Privacy Policy</string>
+    <string name="profile_settings_report_bug">Report a Bug</string>
+    <string name="profile_settings_love_us">Love Us</string>
+    <string name="profile_settings_blocked_users">Blocked Users</string>
+    <string name="profile_settings_logout">Log Out</string>
+    <string name="profile_settings_delete_account">Delete Account</string>
+
+    <!-- Clear cache confirmation (ProfileSettingsScreen.kt) -->
+    <string name="clear_cache_dialog_title">Clear Cache? 🧹</string>
+    <string name="clear_cache_dialog_body">Clearing cache will delete all temporary files and unsent letter drafts. Are you sure you want to proceed?</string>
+    <string name="clear_cache_dialog_cta_confirm">Clear Cache</string>
+    <string name="clear_cache_dialog_cta_cancel">Cancel</string>
+    <string name="clear_cache_success">Cache cleared successfully</string>
+
+    <!-- Delete account confirmation (ProfileSettingsScreen.kt) -->
+    <string name="delete_account_dialog_title">Delete Your Account? ⚠️</string>
+    <string name="delete_account_dialog_body">Your account will be permanently deactivated and cannot be recovered. Are you sure you want to proceed?</string>
+    <string name="delete_account_dialog_cta_confirm">Yes, Delete Account</string>
+    <string name="delete_account_dialog_cta_cancel">Cancel</string>
+    <string name="delete_account_error">Failed to delete account. Please try again.</string>
+
+
+    <!-- Splash (SplashScreen.kt) -->
+    <string name="splash_logo_desc">PenyPost logo</string>
+    <string name="splash_title">Wusss! Safe landing! 🐧💌</string>
+    <string name="splash_subtitle">Peny is sorting letters before sliding onto your screen…</string>
+
+    <!-- Welcome carousel (WelcomeCarouselScreen.kt) -->
+    <string name="welcome_slide1_title">Write Warm Letters ✉️</string>
+    <string name="welcome_slide1_body">Slow down and share thoughtful stories with penpals around the world.</string>
+    <string name="welcome_slide2_title">Meet Global Penpals 🌍</string>
+    <string name="welcome_slide2_body">Connect with like-minded souls across borders and cultures.</string>
+    <string name="welcome_slide3_title">Peny Is Ready to Slide! 🐧💨</string>
+    <string name="welcome_slide3_body">Your personal Antarctic courier is set to deliver your letters safely.</string>
+    <string name="welcome_cta_explore">Explore First</string>
+    <string name="welcome_google_short">Google</string>
+
+    <!-- Login (LoginScreen.kt / GoogleSignInButton.kt) -->
+    <string name="login_tagline">Write letters.\nConnect the world.</string>
+    <string name="login_sign_in_cta">Continue with Google</string>
+    <string name="login_sign_in_section_label">Sign in to continue</string>
+    <string name="login_terms">By signing in, you agree to our Terms of Service and Privacy Policy.</string>
+    <string name="login_error_generic">Oops, something went wrong. Try again! 🐧</string>
+    <string name="login_google_icon_desc">Google</string>
+    <string name="login_or_divider">or</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_placeholder">you@example.com</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_placeholder">At least 6 characters</string>
+    <string name="login_password_show_desc">Show password</string>
+    <string name="login_password_hide_desc">Hide password</string>
+    <string name="login_sign_in_with_email_cta">Sign In</string>
+    <string name="login_sign_up_with_email_cta">Sign Up</string>
+    <string name="login_switch_to_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="login_switch_to_sign_in">Already have an account? Sign In</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_reset_email_sent">Reset link sent! Check your inbox.</string>
+    <string name="login_reset_email_needs_email">Enter your email above first.</string>
+    <string name="login_continue_with_email">Continue with Email</string>
+    <string name="login_create_account_tab">Sign Up</string>
+    <string name="login_sign_in_tab">Sign In</string>
+    <string name="login_back_to_options">Other Options</string>
+    <string name="login_password_hint_create">Password must be at least 6 characters</string>
+
+    <!-- Auth Guard (AuthGuardBottomSheet.kt) -->
+    <string name="auth_guard_title">Say hello first! 💌</string>
+    <string name="auth_guard_body">Sign in real quick so Peny can help deliver your letter.</string>
+    <string name="auth_guard_cta_sign_in">Sign In / Sign Up</string>
+    <string name="auth_guard_cta_dismiss">Not now</string>
+
+    <!-- Draft-on-Exit (LetterlyCenterDialog.kt / WriteExitGuard.kt) -->
+    <string name="save_draft_dialog_title">Save It as a Draft First? 💌</string>
+    <string name="save_draft_dialog_body">Peny can save the text as a draft. But images, doodles, and stickers won\'t come along, though.</string>
+    <string name="save_draft_dialog_cta_save">Save as Draft</string>
+    <string name="save_draft_dialog_cta_discard">Discard Letter</string>
+
+    <!-- Draft delete confirmation (ProfileDraftScreen.kt) -->
+    <string name="delete_draft_dialog_title">Sure You Want to Toss It? 🗑️</string>
+    <string name="delete_draft_dialog_body">Peny worked hard keeping this draft safe. Are you sure you want to delete it?</string>
+    <string name="delete_draft_dialog_cta_confirm">Yes, Delete It</string>
+    <string name="delete_draft_dialog_cta_cancel">Cancel</string>
+
+    <!-- Logout confirmation (ProfileSettingsScreen.kt) -->
+    <string name="logout_dialog_title">Leaving Already? 👋</string>
+    <string name="logout_dialog_body">You can always come back — your letters will be safely waiting for you.</string>
+    <string name="logout_dialog_cta_confirm">Yes, Log Out</string>
+    <string name="logout_dialog_cta_cancel">Cancel</string>
+
+    <!-- Register (RegisterScreen.kt) -->
+    <string name="register_title">Create your profile</string>
+    <string name="register_subtitle">How should we call you?</string>
+    <string name="register_nickname_label">Nickname</string>
+    <string name="register_nickname_placeholder">e.g. sunny_wanderer</string>
+    <string name="register_continent_label">Where are you from?</string>
+    <string name="register_cta">Let\'s Go! ✉️</string>
+
+    <!-- Onboarding shared (OnboardingScaffold.kt) -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_step_desc">Step %1$d of %2$d</string>
+
+    <!-- Onboarding step 1 — TOS (OnboardingTosScreen.kt) -->
+    <string name="onboarding_tos_title">Before we start…</string>
+    <string name="onboarding_tos_subtitle">Please read and agree to our terms before continuing.</string>
+    <string name="onboarding_tos_checkbox">I agree to the <b>Terms of Service</b> and <b>Privacy Policy</b></string>
+    <string name="onboarding_tos_cta">Agree &amp; Continue ✉️</string>
+    <string name="onboarding_tos_error">Unable to save agreement. Please try again.</string>
+    <string name="legal_document_terms_title">Terms of Service</string>
+    <string name="legal_document_privacy_title">Privacy Policy</string>
+    <string name="legal_document_close_desc">Close</string>
+
+    <!-- Onboarding step 2 — Permissions (OnboardingPermissionsScreen.kt) -->
+    <string name="onboarding_permissions_title">Let Peny Knock on Your Door 🔔</string>
+    <string name="onboarding_permissions_subtitle">Just two quick permissions so Peny can take care of your letters properly.</string>
+    <string name="onboarding_permissions_notification_title">New letter notifications</string>
+    <string name="onboarding_permissions_notification_body">Turn on notifications so Peny can tell you right away when a letter from your penpal lands!</string>
+    <string name="onboarding_permissions_storage_title">Save &amp; share letters</string>
+    <string name="onboarding_permissions_storage_body">Allow gallery access so Peny can save your favorite letters or share them with friends!</string>
+    <string name="onboarding_permissions_cta">Sure, Peny!</string>
+
+    <!-- Onboarding step 3 — Gender &amp; Birthday (OnboardingGenderBirthdayScreen.kt) -->
+    <string name="onboarding_gender_birthday_title">Tell us about you</string>
+    <string name="onboarding_gender_birthday_subtitle">This helps Peny find the perfect penpal for you! 🐧</string>
+    <string name="onboarding_gender_label">Gender</string>
+    <string name="onboarding_gender_male">Male</string>
+    <string name="onboarding_gender_female">Female</string>
+    <string name="onboarding_birthday_label">Birthday</string>
+    <string name="onboarding_birthday_placeholder">Pick your birthday</string>
+    <string name="onboarding_birthday_age_gate_error">You must be at least %1$d years old to use Peny.</string>
+    <string name="onboarding_gender_birthday_cta">Next ✉️</string>
+
+    <!-- Onboarding step 4 — Language &amp; Bio (OnboardingLanguageBioScreen.kt) -->
+    <string name="onboarding_language_bio_title">Language &amp; bio</string>
+    <string name="onboarding_language_bio_subtitle">Let your pen pals know a bit about you.</string>
+    <string name="onboarding_language_label">Languages you write in</string>
+    <string name="onboarding_language_card_hint">Tap to select languages</string>
+    <string name="onboarding_language_picker_sheet_title">Select Penpal Languages</string>
+    <string name="onboarding_language_picker_sheet_subtitle">Choose one or more languages you can write in</string>
+    <string name="onboarding_language_search_placeholder">Search language…</string>
+    <string name="onboarding_language_done_cta">Save (%1$d selected)</string>
+    <string name="onboarding_bio_label">Bio</string>
+    <string name="onboarding_bio_placeholder">Tell pen pals a bit about yourself…</string>
+    <string name="onboarding_bio_counter">%1$d / %2$d</string>
+    <string name="onboarding_language_bio_cta">Next ✉️</string>
+
+    <!-- Onboarding step 5 — Photo (OnboardingPhotoScreen.kt) -->
+    <string name="onboarding_photo_title">Profile photo</string>
+    <string name="onboarding_photo_subtitle">Put a face to your letters.</string>
+    <string name="onboarding_photo_pick_hint">Tap the circle to choose a photo from your gallery.</string>
+    <string name="onboarding_photo_pick_hint_change">Tap to choose a different photo.</string>
+    <string name="onboarding_photo_cta">Continue without photo</string>
+    <string name="onboarding_photo_cta_with_photo">Continue with This Photo ✉️</string>
+
+    <!-- Onboarding step 6 — Interests (OnboardingInterestsScreen.kt) -->
+    <string name="onboarding_interests_title">What are you into?</string>
+    <string name="onboarding_interests_subtitle">Pick a few — pen pals will find you based on these.</string>
+    <string name="onboarding_interests_empty">Couldn\'t load interests.</string>
+    <string name="onboarding_interests_retry">Retry</string>
+    <string name="onboarding_interests_cta_done">Done, Peny! 🐧</string>
+
+    <!-- Onboarding step 7 — Notify hour (OnboardingNotifyHourPrefScreen.kt) -->
+    <string name="onboarding_notify_hour_title">When do you want new letters?</string>
+    <string name="onboarding_notify_hour_subtitle">We\'ll drop a fresh stack around this time each day. Change it anytime in Settings.</string>
+    <string name="onboarding_notify_hour_morning">🌅 Morning</string>
+    <string name="onboarding_notify_hour_afternoon">☀️ Afternoon</string>
+    <string name="onboarding_notify_hour_evening">🌙 Evening</string>
+    <string name="onboarding_notify_hour_cta">Done, Peny! 🐧</string>
+
+    <!-- Error Messages (NetworkErrorUtils.kt) -->
+    <string name="error_unauthorized">Please sign in to access this feature.</string>
+    <string name="error_forbidden">Access is not allowed.</string>
+    <string name="error_not_found">Content not found.</string>
+    <string name="error_server">Service unavailable. Please try again later.</string>
+    <string name="error_network">Unable to connect to server. Please check your internet connection.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_penpals_feed">Failed to load penpal feed</string>
+    <string name="error_penpals_like">Failed to update like</string>
+    <string name="error_penpals_regions">Failed to load regions</string>
+    <string name="error_penpals_refresh">Failed to refresh feed</string>
+    <string name="error_penpals_refresh_insufficient_energy">Your energy isn\'t enough to refresh the feed.</string>
+    <string name="error_letters_send">Failed to send letter</string>
+    <string name="error_letters_inbox">Failed to load inbox</string>
+    <string name="error_letters_detail">Failed to load letter details</string>
+    <string name="error_letters_unlock">Couldn\'t speed up this letter, try again</string>
+    <string name="error_letters_unlock_insufficient_energy">Not enough energy — you need %1$d, you have %2$d</string>
+    <string name="error_stamps_energy_purchase_failed">Oops, something went wrong. Try again! 🐧</string>
+    <string name="error_letters_showcase">Failed to load Postal Collection</string>
+    <string name="error_letters_showcase_update">Couldn\'t update this item, try again</string>
+    <string name="error_mailbox_list">Failed to load mailbox</string>
+    <string name="error_mailbox_thread">Failed to load conversation</string>
+    <string name="error_storage_presign">Failed to prepare image upload</string>
+    <string name="error_storage_upload">Failed to upload letter image</string>
+    <string name="error_storage_presign_photo">Failed to prepare photo upload</string>
+    <string name="error_storage_upload_photo">Failed to upload profile photo</string>
+
+    <!-- Push notifications (PenyPostMessagingService.kt) -->
+    <string name="fcm_notification_channel_name">Letter arrivals</string>
+    <string name="fcm_notification_channel_description">Notified when a new letter from your penpal arrives.</string>
+
+    <!-- Daily unread-mail reminder (UnreadReminderWorker.kt) -->
+    <string name="unread_reminder_channel_name">Unread mail reminders</string>
+    <string name="unread_reminder_channel_description">A once-a-day nudge if you still have unread letters waiting.</string>
+    <string name="unread_reminder_notification_title">Don\'t forget to check your mail! 💌</string>
+    <plurals name="unread_reminder_notification_body">
+        <item quantity="one">You have %1$d unread letter waiting for you.</item>
+        <item quantity="other">You have %1$d unread letters waiting for you.</item>
+    </plurals>
+    <string name="error_catalog_envelopes">Failed to load envelope designs</string>
+    <string name="error_catalog_stamps">Failed to load stamp designs</string>
+    <string name="error_catalog_stickers">Failed to load sticker designs</string>
+    <string name="error_penpals_match">No penpals available in this region yet — try another region!</string>
+    <string name="compose_validation_body_too_short">Tell us a bit more — more than just a greeting 😄</string>
+    <string name="error_auth_signin">Sign-in failed</string>
+    <string name="error_auth_profile">Failed to load profile</string>
+    <string name="error_auth_register">Registration failed</string>
+    <string name="error_auth_update_profile">Failed to update profile</string>
+    <string name="error_auth_update_interests">Failed to update interests</string>
+    <string name="error_auth_interests">Failed to load interests</string>
+    <string name="error_auth_update_languages">Failed to update languages</string>
+    <string name="error_auth_email_weak_password">Password should be at least 6 characters.</string>
+    <string name="error_auth_email_already_in_use">An account already exists with that email — try signing in instead.</string>
+    <string name="error_auth_email_user_not_found">No account found with that email.</string>
+    <string name="error_auth_email_invalid_credentials">Incorrect email or password.</string>
+    <string name="error_auth_email_generic">Something went wrong. Try again.</string>
+
+    <!-- ── Public profile bottom sheet ───────────────────────────────────── -->
+    <string name="public_profile_not_found_title">Profile unavailable</string>
+    <string name="public_profile_not_found_body">This user profile could not be found.</string>
+    <string name="public_profile_online_now">Online now</string>
+    <string name="public_profile_last_seen_unknown">Last seen unknown</string>
+    <string name="public_profile_member_label">PenyPost Member</string>
+    <string name="public_profile_about_section_label">ABOUT ME</string>
+    <string name="public_profile_interests_section_label">PASSIONS &amp; INTERESTS</string>
+    <string name="public_profile_more_desc">More options</string>
+    <string name="public_profile_menu_report">Report</string>
+    <string name="public_profile_menu_add_to_address_book">Add to Address Book</string>
+    <string name="public_profile_menu_block">Block User</string>
+    <string name="public_profile_add_to_address_book_dialog_title">Add %1$s to your address book?</string>
+    <string name="public_profile_add_to_address_book_dialog_body">You\'ll both be added to each other\'s address book, making it easy to send letters back and forth.</string>
+    <string name="public_profile_add_to_address_book_cta_send">Send Request</string>
+    <string name="public_profile_add_to_address_book_cta_cancel">Cancel</string>
+    <string name="public_profile_address_book_sent_dialog_title">Request Sent! 💌</string>
+    <string name="public_profile_address_book_sent_dialog_body">Friend request successfully sent. You\'re both in each other\'s address book now.</string>
+    <string name="public_profile_address_book_sent_dialog_cta">Nice!</string>
+    <string name="public_profile_report_submitted_toast">Report submitted. Thanks for helping keep PenyPost safe.</string>
+    <string name="error_address_book_add">Oops, that didn\'t go through. Give it another try!</string>
+    <string name="error_invite_generate">Couldn\'t create your invite code. Please try again.</string>
+    <string name="error_invite_redeem">That invite code didn\'t work. Double-check it and try again.</string>
+
+    <!-- ── Blocked Users settings screen (BlockedUsersScreen.kt) ────────────── -->
+    <string name="blocked_users_title">Blocked Users</string>
+    <string name="blocked_users_empty_title">No blocked users</string>
+    <string name="blocked_users_empty_body">Users you block will show up here.</string>
+    <string name="blocked_users_blocked_on_label">Blocked on %1$s</string>
+    <string name="blocked_users_unblock_cta">Unblock</string>
+    <string name="unblock_user_confirm_dialog_title">Unblock %1$s?</string>
+    <string name="unblock_user_confirm_dialog_body">You\'ll be able to send letters and see each other\'s profile again.</string>
+    <string name="unblock_user_confirm_dialog_cta_confirm">Unblock</string>
+    <string name="unblock_user_confirm_dialog_cta_cancel">Cancel</string>
+    <!-- ── Open letter session end ────────────────────────────────────────── -->
+    <string name="open_letter_end_of_session_title">End of Mail Feed</string>
+    <string name="open_letter_end_of_session_subtitle">You\'ve read all letters in this session. Tap to return to Postal Desk.</string>
+    <string name="open_letter_page_indicator">Letter %1$d of %2$d • Swipe up for next mail</string>
+
+    <!-- ── Collectibles & Item Pickers (Compose & Select Recipient) ── -->
+    <string name="picker_category_basic">Classic Collection</string>
+    <string name="picker_category_collectibles">My Collectibles</string>
+    <string name="picker_collectibles_count">%1$d items</string>
+    <string name="picker_collectibles_empty_title">Creator Collection</string>
+    <string name="picker_collectibles_empty_desc">Handcrafted items made by independent artists.</string>
+    <string name="picker_collectibles_buy_cta">Buy Collectibles 🛍️</string>
+    <string name="picker_collectibles_more_cta">+ Explore Store</string>
+    <string name="picker_badge_creator">Creator</string>
+    <string name="picker_badge_owned">Owned ✓</string>
+    <string name="picker_preview_store_notice">Available in Peny Store. Want to visit the store?</string>
+    <string name="picker_collectibles_find_more_short">Find More →</string>
+    <string name="picker_collectibles_find_more_card_title">Find More</string>
+    <string name="picker_collectibles_find_more_card_desc">Explore Store</string>
+
+    <!-- Collectibles Picker aesthetic teasers (tailored per item type) -->
+    <string name="picker_collectibles_paper_pitch">✨ Make your letter a little prettier</string>
+    <string name="picker_collectibles_paper_desc">Discover handcrafted stationery and textured paper.</string>
+    <string name="picker_collectibles_paper_find_more_title">Prettier Paper</string>
+
+    <string name="picker_collectibles_sticker_pitch">✨ Add a little something to your letter</string>
+    <string name="picker_collectibles_sticker_desc">Brighten up your thoughts with sweet artist stickers.</string>
+    <string name="picker_collectibles_sticker_find_more_title">Sweet Stickers</string>
+
+    <string name="picker_collectibles_envelope_pitch">✨ Give your letter a special home</string>
+    <string name="picker_collectibles_envelope_desc">Choose a beautifully patterned envelope for the journey.</string>
+    <string name="picker_collectibles_envelope_find_more_title">Special Envelopes</string>
+
+    <string name="picker_collectibles_stamp_pitch">✨ Seal it with a meaningful touch</string>
+    <string name="picker_collectibles_stamp_desc">Unique artisan stamps to complete your handwritten letter.</string>
+    <string name="picker_collectibles_stamp_find_more_title">Artisan Stamps</string>
+
+</resources>

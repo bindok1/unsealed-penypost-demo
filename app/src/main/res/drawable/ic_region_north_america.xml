@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#2626A69A"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Rocky Mountain Ridge -->
+    <path
+        android:fillColor="#FF546E7A"
+        android:pathData="M6,36L18,16L28,30L34,22L42,36Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M18,16L22,22L19,23L17,21L15,22Z M34,22L37,27L35,28L33,26L32,27Z" />
+    <!-- Pine Trees in foreground -->
+    <path
+        android:fillColor="#FF1B5E20"
+        android:pathData="M10,36L14,28L18,36Z M12,31L14,26L16,31Z" />
+    <path
+        android:fillColor="#FF2E7D32"
+        android:pathData="M22,36L26,26L30,36Z M24,29L26,23L28,29Z" />
+    <path
+        android:fillColor="#FF388E3C"
+        android:pathData="M30,36L34,29L38,36Z" />
+</vector>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required by the Downloadable Fonts provider (GoogleFontCatalog.kt) to
+         fetch on-demand Google Fonts via Google Play Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Strip unused location permissions merged from the MapLibre/Mapbox SDKs
+         (both bundle an optional user-location "puck" feature this app never
+         enables). Unsealed never accesses user GPS — delivery routes are always
+         illustrated with representative regional/continental points, regardless
+         of which map renderer (GeoJSON or Mapbox) is active. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:node="remove" />
+
+    <!-- Legacy gallery write path for ShareLetterActions.saveImageToGallery on
+         API 24-28; scoped storage on 29+ needs no permission for the app's
+         own MediaStore contributions. Requested at runtime in the onboarding
+         "Permissions" step (OnboardingPermissionsScreen) on API <29 devices. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Letter-arrival push notifications. API 33+ requires this to be
+         requested at runtime (see OnboardingPermissionsScreen); ignored by
+         the system below API 33, where notifications are granted by default. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Required for Google Play Billing (in-app purchases/subscriptions). -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- Required for Advertising ID (Google Play Services Analytics) -->
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <!-- Package-visibility (API 30+): required for ShareLetterActions.isPackageInstalled
+         to see Instagram/WhatsApp — without these, resolveActivity/getPackageInfo
+         silently act as "not installed" even when they are. -->
+    <queries>
+        <package android:name="com.instagram.android" />
+        <package android:name="com.whatsapp" />
+        <package android:name="com.whatsapp.w4b" />
+        <!-- Required (API 30+) for InstallReferrerReader's bindService to reach the Play
+             Store's referrer service — without it, InstallReferrerClient silently never
+             connects instead of returning a clear error. -->
+        <package android:name="com.android.vending" />
+    </queries>
+
+    <application
+        android:name=".UnsealedApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Unsealed"
+        android:localeConfig="@xml/locales_config">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Unsealed">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- App Links for "Invite Friends" (docs/be_updet/invite_friend_api.md §5.1.B) —
+                 requires public/.well-known/assetlinks.json on peny-dashboard-xi.vercel.app
+                 to reference this app's signing cert(s), or autoVerify silently fails and the
+                 link falls back to opening in the browser instead of this app. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="peny-dashboard-xi.vercel.app"
+                    android:pathPrefix="/invite" />
+            </intent-filter>
+        </activity>
+
+        <!-- UnsealedApplication implements Configuration.Provider, which makes
+             WorkManager's on-demand initialization responsible for calling
+             WorkManager.initialize() lazily on first access. The default App
+             Startup-driven WorkManagerInitializer must be removed or it fights
+             the on-demand path (see lint's RemoveWorkManagerInitializer check). -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <!-- Grants content:// access to cache/shared_letters/ for
+             ShareLetterActions' Instagram/WhatsApp/system-chooser intents. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Letter-arrival push notifications — see UnsealedMessagingService.kt
+             and docs/be/notifications_api.md. -->
+        <service
+            android:name=".core.messaging.UnsealedMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Used when the system auto-displays a notification for a background/
+             killed app (FCM bypasses UnsealedMessagingService.onMessageReceived
+             in that case) — without these, backgrounded notifications fall back
+             to a generic icon/channel instead of matching what onMessageReceived
+             builds manually for the foreground case. "letter_arrivals" must stay
+             in sync with UnsealedMessagingService's ChannelId constant. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <!-- Per-app locale persistence on Android 12 and below (AppCompatDelegate) -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+
+    </application>
+
+</manifest>

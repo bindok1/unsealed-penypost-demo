@@ -1,0 +1,985 @@
+<resources>
+    <string name="app_name">PenyPost</string>
+
+    <string name="nav_mailbox">MailBox</string>
+    <string name="nav_write">Tulis</string>
+    <string name="nav_stamps">Stamps</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- PenPals greeting (PenPalsScreen.kt) -->
+    <string name="penpals_greeting_hello">Halo, %1$s! 👋</string>
+    <string name="penpals_greeting_guest_name">Tamu</string>
+    <string name="penpals_greeting_default_title">Siap Berseluncur Hari Ini? 🐧</string>
+    <string name="penpals_greeting_default_body">Peny lagi siap-siap. Mau kirim surat ke mana kita hari ini?</string>
+    <string name="penpals_view_mode_grid_desc">Tampilan grid</string>
+    <string name="penpals_view_mode_loose_desk_desc">Tampilan meja acak</string>
+    <string name="penpals_refresh_card_title">Hubungan Bermakna, Bukan Doomscrolling 💌</string>
+    <string name="penpals_refresh_card_subtitle">Tumpukan baru datang besok — atau reroll tumpukan hari ini sekarang pakai energy.</string>
+    <string name="penpals_refresh_card_icon_desc">Refresh tumpukan</string>
+    <string name="penpals_refresh_sheet_title">🐧 Mau Surat Baru Sekarang?</string>
+    <string name="penpals_refresh_sheet_body">Reroll tumpukan hari ini lebih awal pakai %1$d energy. Sisa energy kamu: %2$d ⚡</string>
+    <string name="penpals_refresh_sheet_cta_confirm">Refresh Sekarang (%1$d ⚡)</string>
+    <string name="penpals_refresh_sheet_cta_dismiss">Tunggu Surat Besok</string>
+    <string name="penpals_refresh_success_toast">Tumpukan sudah di-refresh! 🐧</string>
+
+    <!-- Font Picker (FontPickerSheet.kt) -->
+    <string name="font_picker_title">Pilih Gaya Tulisan</string>
+    <string name="font_picker_preview_text">Halo,</string>
+    <string name="font_picker_selected_desc">Dipilih</string>
+    <string name="font_picker_bold_desc">Tebal</string>
+    <string name="font_picker_italic_desc">Miring</string>
+    <string name="font_picker_more_fonts_label">Font Lainnya</string>
+    <string name="font_picker_download_desc">Unduh font</string>
+    <string name="font_picker_downloading_desc">Mengunduh</string>
+    <string name="font_picker_download_failed_desc">Gagal unduh, ketuk untuk coba lagi</string>
+
+    <!-- Formatting Bar (FormattingBar.kt) -->
+    <string name="formatting_bar_font_desc">Font</string>
+    <string name="formatting_bar_alignment_desc">Perataan</string>
+    <string name="formatting_bar_indent_desc">Indentasi</string>
+    <string name="formatting_bar_hide_keyboard_desc">Sembunyikan papan ketik</string>
+    <string name="formatting_bar_text_size_desc">Ukuran Teks</string>
+    <string name="formatting_bar_text_size_small">Kecil</string>
+    <string name="formatting_bar_text_size_large">Besar</string>
+
+    <!-- Annotate Mode toolbar (AnnotateToolbar.kt) -->
+    <string name="annotate_tool_pen">Pena</string>
+    <string name="annotate_tool_fine">Halus</string>
+    <string name="annotate_tool_wave">Gelombang</string>
+    <string name="annotate_tool_deco">Dekorasi</string>
+    <string name="annotate_tool_eraser">Penghapus</string>
+
+    <!-- Annotate ink color picker (AnnotateColorPicker.kt) -->
+    <string name="annotate_color_mode_spectrum">Spektrum</string>
+    <string name="annotate_color_mode_grid">Grid</string>
+    <string name="annotate_color_mode_slider">Penggeser</string>
+    <string name="annotate_opacity_label">Opasitas</string>
+    <string name="annotate_hex_copy_desc">Salin kode warna</string>
+    <string name="annotate_hex_copied_desc">Disalin</string>
+
+    <!-- Top Toolbar (ComposeToolbar.kt) -->
+    <string name="toolbar_undo_desc">Urungkan</string>
+    <string name="toolbar_redo_desc">Ulangi</string>
+    <string name="toolbar_font_desc">Font</string>
+    <string name="toolbar_keyboard_desc">Papan Ketik</string>
+    <string name="toolbar_annotate_desc">Annotasi</string>
+    <string name="toolbar_send_desc">Kirim</string>
+
+    <!-- Compose Validation (ComposeScreen.kt) -->
+    <string name="compose_error_body_too_short">Suratmu terlalu pendek, nih! Tulis minimal 20 karakter ya biar Peny bisa bawa cerita hangatmu 🐧</string>
+    <string name="compose_error_body_too_long">Suratmu kepanjangan, nih! Maksimal 2000 karakter ya biar tas Peny gak keberatan 📦🐧</string>
+    <string name="compose_error_dismiss_desc">Tutup peringatan</string>
+
+    <!-- Letter Canvas (LetterCanvas.kt) -->
+    <string name="compose_body_placeholder">Dear ___,</string>
+
+    <!-- Mode Peny (PenyTriggerGlyph.kt, PenyReplyOverlay.kt, ComposeViewModel.kt) -->
+    <string name="compose_peny_trigger_content_desc">Ngobrol sama Peny</string>
+    <!-- Muncul menggantikan compose_body_placeholder begitu ComposeUiState.isPenyIdleHintVisible jadi true (LetterCanvas.kt) — tap buat langsung aktifin Mode Peny, sama seperti PenyWandHint. -->
+    <string name="compose_peny_idle_hint_prompt">Bingung mau nulis apa? Ketuk buat dibantu Peny ✨</string>
+    <string-array name="compose_peny_input_placeholders">
+        <item>Bisikkan sesuatu ke Peny…</item>
+        <item>Gimana harimu tadi?</item>
+        <item>Ada yang lagi kepikiran?</item>
+        <item>Peny siap dengerin, kalau mau cerita.</item>
+        <item>Ada yang mau diomongin hari ini?</item>
+        <item>Cerita dikit ke Peny yuk.</item>
+        <item>Peny di sini kok, kalau kamu siap.</item>
+    </string-array>
+    <string-array name="compose_peny_local_greetings">
+        <item>Hai! 🐧 Ada apa nih?</item>
+        <item>Halo! Peny siap dengerin.</item>
+        <item>Hei, cerita dong ke Peny.</item>
+        <item>Waddle waddle~ hai! Ada kabar apa?</item>
+        <item>Halo halo! Peny lagi nyimak nih.</item>
+        <item>Eh, hai! Peny lagi beres-beres surat. Ada apa?</item>
+    </string-array>
+    <string-array name="compose_peny_local_invites">
+        <item>Cerita lebih lanjut dong, Peny penasaran 🐧</item>
+        <item>Hmm, terus? Peny dengerin kok.</item>
+        <item>Lho, kenapa tuh?</item>
+        <item>Peny mau dengar lebih banyak soal itu.</item>
+        <item>Lanjutin dong, Peny di sini kok.</item>
+        <item>Terus terus, gimana?</item>
+    </string-array>
+    <string-array name="compose_peny_energy_insufficient_messages">
+        <item>Energi Peny lagi tipis nih 🐧 Cek-in dulu yuk atau selesaikan quest buat energi tambahan!</item>
+        <item>Waduh, energi Peny abis! Ambil energi tambahan dari quest harian, terus lanjut ngobrol lagi ya.</item>
+        <item>Peny perlu ngecas energi bentar — cek reward harianmu buat tambahan energi!</item>
+    </string-array>
+    <string-array name="compose_peny_reply_failed_messages">
+        <item>…kertasnya kayak lagi diem sejenak. Coba lagi?</item>
+        <item>Hmm, Peny kurang nangkep. Coba sekali lagi?</item>
+        <item>Tintanya kayak lagi jeda… coba lagi yuk?</item>
+    </string-array>
+    <string name="compose_peny_copy_dialog_title">Salin ke Surat?</string>
+    <string name="compose_peny_copy_dialog_body">Apakah kamu ingin menyalin teks terakhir dari Mode Peny ke suratmu?</string>
+    <string name="compose_peny_copy_dialog_confirm">Salin ke Surat</string>
+    <string name="compose_peny_copy_dialog_dismiss">Jangan Salin</string>
+    <string name="compose_peny_energy_paywall_title">Energi Peni Abis, Nih!</string>
+    <string name="compose_peny_energy_paywall_body">Biar Peni bisa lanjut bantu nulis balasan, isi energi dulu, yuk!</string>
+    <string name="compose_peny_energy_paywall_cta">Isi Energi</string>
+    <string name="compose_peny_energy_paywall_dismiss">Nanti Aja</string>
+
+    <!-- Sticky Reply Banner (StickyReplyBanner.kt) -->
+    <string name="sticky_reply_banner_reply_desc">Balas</string>
+    <string name="sticky_reply_banner_replying_to">Membalas ke %1$s</string>
+    <string name="sticky_reply_banner_read_original">Ketuk untuk baca surat aslinya</string>
+    <string name="sticky_reply_banner_read_desc">Baca</string>
+    <string name="sticky_reply_banner_view_thread">Ketuk untuk melihat percakapan</string>
+    <string name="sticky_reply_banner_view_thread_desc">Lihat Thread</string>
+
+    <!-- Device Capability Bottom Sheet (DeviceCapabilityBottomSheet.kt) -->
+    <string name="compose_device_unsupported_title">Fiturnya Licin Banget Nih 🐧💨</string>
+    <string name="compose_device_unsupported_body">Gambar &amp; coretan butuh HP yang lebih gesit biar suratmu tetap rapi. Tenang, kamu tetap bisa kirim surat hangat pakai teks kok!</string>
+    <string name="compose_device_unsupported_cta">Oke, Peny!</string>
+
+
+    <!-- Overflow Menu (OverflowMenuButton.kt) -->
+    <string name="toolbar_more_desc">Lainnya</string>
+    <string name="overflow_menu_change_paper">Ganti Kertas</string>
+    <string name="overflow_menu_insert_image">Sisipkan Gambar</string>
+    <string name="overflow_menu_add_sticker">Pasang Stiker</string>
+    <string name="overflow_menu_save_photos">Simpan ke Foto</string>
+    <string name="overflow_menu_share">Bagikan Surat</string>
+    <string name="overflow_menu_public_showcase_enable">Tampilkan di Postal Collection</string>
+    <string name="overflow_menu_public_showcase_disable">Hapus dari Postal Collection</string>
+    <!-- Entry point SEMENTARA buat QA (OverflowMenuButton.kt) — hapus kalau PenyTriggerGlyph sudah dipastikan jalan -->
+    <string name="overflow_menu_peny_mode_activate">Aktifkan Mode Peny (Test)</string>
+    <string name="overflow_menu_peny_mode_deactivate">Matikan Mode Peny (Test)</string>
+
+    <!-- Public showcase opt-in confirm dialog (ComposeScreen.kt) -->
+    <string name="compose_public_showcase_dialog_title">Publikasikan surat ini?</string>
+    <string name="compose_public_showcase_dialog_body">Siapa pun yang membuka profil kamu bisa melihat desain amplop dan kertas surat ini di Postal Collection kamu. Surat tetap terkirim seperti biasa — ini cuma bikin tampilannya jadi publik. Hindari share info pribadi (nomor HP, alamat, dll) di surat yang kamu publish.</string>
+    <string name="compose_public_showcase_dialog_confirm">Ya, publikasikan</string>
+    <string name="compose_public_showcase_dialog_cancel">Nanti dulu</string>
+
+    <!-- Inserted Image edit controls (EditableImage.kt) -->
+    <string name="image_edit_more_desc">Opsi gambar lainnya</string>
+    <string name="image_edit_change_desc">Ganti gambar</string>
+    <string name="image_edit_crop_desc">Pangkas</string>
+    <string name="image_edit_duplicate_desc">Duplikat</string>
+    <string name="image_edit_send_to_back_desc">Kirim ke Belakang</string>
+    <string name="image_edit_bring_to_front_desc">Bawa ke Depan</string>
+    <string name="image_edit_delete_desc">Hapus gambar</string>
+    <string name="image_edit_resize_desc">Tarik untuk mengubah ukuran</string>
+    <string name="image_edit_reset_scale">Reset ukuran</string>
+    <string name="image_crop_reset">Atur Ulang</string>
+    <string name="image_crop_done">Selesai</string>
+
+    <!-- Paper Picker (PaperPickerSheet.kt) -->
+    <string name="paper_picker_title">Ganti Kertas</string>
+
+    <!-- Paper Templates (PaperTemplate.kt) -->
+    <string name="paper_template_grid">Kotak-Kotak</string>
+    <string name="paper_template_lined">Bergaris</string>
+    <string name="paper_template_indigo">Nila</string>
+    <string name="paper_template_aged_kraft">Kraft Tua</string>
+    <string name="paper_template_soft_beige">Krem Lembut</string>
+    <string name="paper_template_dotted">Titik-Titik</string>
+    <string name="paper_template_plain_white">Putih Polos</string>
+    <string name="paper_template_blush_marble">Marmer Pink</string>
+
+    <!-- Mailbox Screen (screen/MailboxScreen.kt) -->
+    <string name="mailbox_title">Kotak Masuk</string>
+    <string name="mailbox_stamp_desc">Perangko dari %1$s</string>
+    <string name="mailbox_empty_label">Belum ada percakapan</string>
+    <string name="mailbox_correspondent_country">%1$s · %2$s</string>
+    <string name="mailbox_unread_dot_desc">Belum dibaca</string>
+
+    <!-- Open Letter Screen (OpenLetterScreen.kt) -->
+    <string name="open_letter_more_desc">Lainnya</string>
+    <string name="open_letter_back_desc">Kembali</string>
+    <string name="open_letter_report_user">Laporkan Pengguna</string>
+    <string name="open_letter_add_friend">Tambah Teman</string>
+    <string name="open_letter_block_user">Blokir Pengguna</string>
+    <string name="open_letter_unblock_user">Buka Blokir</string>
+    <string name="mailbox_thread_blocked_banner_text">Kamu telah memblokir %1$s. Kalian tidak dapat saling mengirim surat.</string>
+    <string name="mailbox_thread_unblock_cta">Buka Blokir</string>
+    <string name="block_user_unblocked_toast">Blokir dibuka.</string>
+    <string name="open_letter_incoming_mail_title">Surat Sedang Dikirim</string>
+    <string name="open_letter_expected_delivery">Perkiraan tiba %1$s</string>
+    <string name="open_letter_open_early">Buka Lebih Awal</string>
+    <string name="open_letter_write_letter">Tulis Surat</string>
+    <string name="open_letter_continue_writing">Lanjut Menulis</string>
+    <string name="original_letter_sheet_title">Surat dari %1$s</string>
+    <string name="original_letter_sheet_empty_body">(Surat tanpa konten teks)</string>
+    <string name="original_letter_sheet_cta_back">Kembali Menulis</string>
+    <string name="open_letter_envelope_icon_desc">Amplop</string>
+    <string name="open_letter_paper_icon_desc">Surat terbuka</string>
+
+    <!-- Letter Sent confirmation (LetterSentScreen.kt) -->
+    <string name="letter_sent_title">Sedang Dalam Perjalanan!</string>
+    <string name="letter_sent_body">Peny lagi otw nganterin suratmu, jalan secepat kaki kecilnya bisa! 🐧</string>
+    <string name="letter_sent_cta">Kembali ke PenPal Feed</string>
+    <string name="letter_sent_write_new_cta">Tulis Surat Lagi</string>
+    <string name="letter_sent_view_profile_cta">Lihat di Koleksi Pos Aku</string>
+    <string name="letter_sent_share_cta">Bagikan</string>
+
+    <!-- Letter Delivery Tracking (DeliveryTrackingScreen.kt / DeliveryRouteMap.kt) -->
+    <string name="letter_tracking_title">Lacak Surat</string>
+    <string name="letter_tracking_route_label">%1$s → %2$s</string>
+    <string name="letter_tracking_sent_label">Dikirim: %1$s</string>
+    <string name="letter_tracking_eta_label">Estimasi tiba: %1$s</string>
+    <string name="letter_tracking_progress_percent">%1$d%%</string>
+    <string name="letter_tracking_delivered_label">Sudah sampai!</string>
+    <string name="letter_tracking_flavor_walk_0">Peny baru berangkat, semangatnya penuh! 🚶</string>
+    <string name="letter_tracking_flavor_walk_20">Lagi jalan, Peny nenteng amplop sambil huming</string>
+    <string name="letter_tracking_flavor_walk_50">Setengah jalan, Peny mampir beli es teh dulu ☕</string>
+    <string name="letter_tracking_flavor_walk_80">Hampir sampai! Peny udah keliatan gang-nya 👀</string>
+    <string name="letter_tracking_flavor_swim_0">Peny nyebur, amplopnya dijagain tetap kering, bon voyage! 🏊</string>
+    <string name="letter_tracking_flavor_swim_20">Berenang santai, gerakannya mantap</string>
+    <string name="letter_tracking_flavor_swim_40">Ombak lumayan besar, Peny mulai capek 🥱</string>
+    <string name="letter_tracking_flavor_swim_60">Sudah kelihatan daratan di kejauhan!</string>
+    <string name="letter_tracking_flavor_swim_80">Terdampar di pantai, hampir sampai! 🏖</string>
+    <string name="letter_tracking_transport_walk_desc">Jalan kaki</string>
+    <string name="letter_tracking_transport_swim_desc">Berenang</string>
+    <string name="letter_tracking_caption_passing_through">Lagi lewat %1$s</string>
+    <string name="letter_tracking_boost_cta">Kasih makan Peny biar cepat</string>
+    <string name="letter_tracking_boost_energy_balance">Energi kamu: %1$d</string>
+    <string name="letter_tracking_boost_confirm_title">Percepat surat ini?</string>
+    <string name="letter_tracking_boost_confirm_body">Kasih makan Peny pakai sebagian energi kamu buat langsung antar surat ini sekarang, nggak perlu nunggu.</string>
+    <string name="letter_tracking_boost_confirm_cta">Kasih Makan Peny</string>
+    <string name="letter_tracking_boost_confirm_cancel">Nanti Dulu</string>
+    <string name="letter_tracking_boost_insufficient_title">Energi Peny Abis, Nih!</string>
+    <string name="letter_tracking_boost_insufficient_cta">Isi Energi Peny</string>
+    <string name="letter_tracking_boost_success_toast">Terkirim! Sisa energi %1$d</string>
+    <string name="letter_tracking_privacy_badge">Rute Perkiraan · Privasi Aman</string>
+    <string name="letter_tracking_privacy_shield_desc">Privasi Terjaga</string>
+    <string name="letter_tracking_privacy_dialog_title">Privasi Lokasi Sahabat Pena</string>
+    <string name="letter_tracking_privacy_dialog_body">Untuk melindungi privasi Anda dan sahabat pena, PenyPost tidak pernah mengakses lokasi GPS perangkat Anda.\n\nRute di peta ini digambarkan menggunakan titik representatif wilayah dan benua agar privasi lokasi tetap 100% terlindungi.</string>
+    <string name="letter_tracking_privacy_dialog_cta">Mengerti</string>
+    <string name="letter_tracking_map_load_failed">Aduh, peta gagal dimuat di perangkat ini. Tenang, suratmu tetap dalam perjalanan! 🐧</string>
+    <string name="letter_tracking_celebration_badge">✨ Surat Telah Sampai! ✨</string>
+    <string name="letter_tracking_celebration_title">Peny Berhasil Mengantar!</string>
+    <string name="letter_tracking_celebration_body_named">Surat dari %1$s sudah tiba di kotak suratmu. Ketuk amplop untuk membukanya!</string>
+    <string name="letter_tracking_celebration_body_generic">Surat penpalmu sudah tiba di kotak suratmu. Ketuk amplop untuk membukanya!</string>
+    <string name="letter_tracking_celebration_envelope_desc">Amplop Surat</string>
+    <string name="letter_tracking_celebration_tap_hint">Ketuk untuk Membuka</string>
+    <string name="letter_tracking_celebration_cta_open">Buka Surat Sekarang</string>
+    <string name="letter_tracking_celebration_cta_back">Kembali ke Percakapan</string>
+    <string-array name="letter_tracking_ocean_captions">
+        <item>Berenang di lautan luas 🌊</item>
+        <item>Peny baru ketemu segerombolan ikan kecil</item>
+        <item>Ombaknya lumayan, tapi Peny kuat!</item>
+        <item>Air lautnya biru banget hari ini</item>
+        <item>Nyelam sebentar buat ambil napas</item>
+    </string-array>
+    <string name="mailbox_in_transit_badge">Dalam Perjalanan</string>
+    <string name="mailbox_outgoing_tracking_title">Sedang otw ke %1$s</string>
+    <string name="mailbox_outgoing_tracking_cta">Lacak</string>
+    <string name="mailbox_outgoing_dialog_title">Surat Sedang Dikirim</string>
+    <string name="mailbox_outgoing_dialog_body">Suratmu sedang dalam perjalanan menuju %1$s. Kamu ingin membaca kembali isi surat yang telah kamu tulis atau melacak perjalanannya di peta?</string>
+    <string name="mailbox_outgoing_dialog_cta_read">Baca Surat</string>
+    <string name="mailbox_outgoing_dialog_cta_track">Lacak Pengiriman</string>
+
+    <!-- Open Letter Overlay — PenPals more-menu & reply-confirm (OpenLetterOverlay.kt) -->
+    <string name="open_letter_menu_start_conversation">Mulai Percakapan</string>
+    <string name="open_letter_menu_view_profile">Lihat Profil</string>
+    <string name="open_letter_menu_share_mail">Bagikan Surat</string>
+    <string name="open_letter_menu_report_mail">Laporkan Surat</string>
+    <string name="open_letter_share_text">Baca surat hangat dari %1$s di PenyPost! ✉️\n\n\"%2$s\"</string>
+    <string name="open_letter_share_chooser_title">Bagikan Surat</string>
+
+    <!-- Share Letter Sheet (widgets/ShareLetterSheet.kt) -->
+    <string name="share_letter_sheet_title">Bagikan surat ini</string>
+    <string name="share_letter_target_instagram">Instagram</string>
+    <string name="share_letter_target_whatsapp">WhatsApp</string>
+    <string name="share_letter_target_save">Simpan Gambar</string>
+    <string name="share_letter_target_more">Lainnya</string>
+    <string name="share_letter_saved_toast">Tersimpan di galeri</string>
+    <string name="share_letter_saved_snackbar_action">Lihat</string>
+    <string name="share_letter_save_failed_toast">Gagal menyimpan gambar</string>
+    <string name="share_letter_app_unavailable">Aplikasi itu belum terpasang</string>
+    <string name="share_letter_storage_permission_denied">Izin penyimpanan dibutuhkan untuk menyimpan foto</string>
+    <string name="share_letter_device_unsupported">Bagikan surat ini butuh HP yang lebih gesit biar tetap rapi di perangkatmu</string>
+
+    <!-- Bookmarks (BookmarksBottomSheet.kt, BookmarksViewModel.kt) -->
+    <string name="open_letter_bookmark_saved_snackbar">Surat disimpan</string>
+    <string name="open_letter_bookmark_removed_snackbar">Dihapus dari surat tersimpan</string>
+    <string name="open_letter_bookmark_view_action">Lihat</string>
+    <string name="bookmarks_sheet_title">Surat Tersimpan</string>
+    <string name="bookmarks_sheet_select">Pilih</string>
+    <string name="bookmarks_sheet_cancel">Batal</string>
+    <string name="bookmarks_sheet_empty_title">Belum ada surat tersimpan</string>
+    <string name="bookmarks_sheet_empty_subtitle">Ketuk ikon bookmark saat baca surat buat nyimpennya di sini.</string>
+    <string name="bookmarks_sheet_remove_selected">Hapus (%1$d)</string>
+    <string name="bookmarks_remove_confirm_title">Hapus surat tersimpan?</string>
+    <string name="bookmarks_remove_confirm_body">Ini cuma menghapus dari daftar simpanan kamu — suratnya sendiri gak ikut kehapus.</string>
+    <string name="bookmarks_remove_confirm_cta">Hapus</string>
+    <string name="bookmarks_remove_confirm_cancel">Batal</string>
+    <string name="reply_confirm_dialog_title">Mulai Percakapan? 💌</string>
+    <string name="reply_confirm_dialog_body">Ketuk Balas buat mulai obrolan sama %1$s! Surat balasanmu juga bakal otomatis mendarat di inbox kamu, jadi gampang dipantau.</string>
+    <string name="reply_confirm_dialog_cta_start">Ya, Balas Sekarang!</string>
+    <string name="reply_confirm_dialog_cta_cancel">Nanti Dulu</string>
+
+    <!-- Report Mail Dialog (ui/components/ReportMailDialog.kt) -->
+    <string name="report_mail_dialog_title">Laporkan Surat Ini</string>
+    <string name="report_mail_dialog_body">Kasih tahu Peny kenapa surat ini bikin kamu gak nyaman. Laporanmu bakal ditinjau tim kami, dan surat ini langsung disembunyikan dari feed-mu.</string>
+    <string name="report_mail_note_label">Ceritakan lebih lanjut (opsional)</string>
+    <string name="report_mail_cta_submit">Kirim Laporan</string>
+    <string name="report_mail_cta_cancel">Batal</string>
+    <string name="report_reason_spam">Spam</string>
+    <string name="report_reason_harassment">Pelecehan</string>
+    <string name="report_reason_inappropriate_content">Konten Tidak Pantas</string>
+    <string name="report_reason_empty_mail">Surat Kosong</string>
+    <string name="report_reason_underage">Pengguna Di Bawah Umur</string>
+    <string name="report_reason_impersonation">Penyamaran Identitas</string>
+    <string name="report_reason_other">Lainnya</string>
+    <string name="error_report_letter">Aduh, laporan gagal terkirim. Coba lagi, ya!</string>
+
+    <!-- Report User Dialog (reuses ui/components/ReportMailDialog.kt via titleRes/bodyRes) -->
+    <string name="report_user_dialog_title">Laporkan Pengguna Ini</string>
+    <string name="report_user_dialog_body">Kasih tahu Peny kenapa profil ini bikin kamu gak nyaman. Laporanmu bakal ditinjau tim kami.</string>
+    <string name="error_report_user">Aduh, laporan gagal terkirim. Coba lagi, ya!</string>
+
+    <!-- Block User confirm dialog (Inbox/PublicProfile/PenPals — docs/be/trust_and_safety_api.md §2) -->
+    <string name="block_user_confirm_dialog_title">Blokir %1$s?</string>
+    <string name="block_user_confirm_dialog_body">Kalian nggak akan bisa saling kirim surat atau lihat profil satu sama lain.</string>
+    <string name="block_user_confirm_dialog_cta_confirm">Blokir</string>
+    <string name="block_user_confirm_dialog_cta_cancel">Batal</string>
+    <string name="block_user_blocked_toast">Pengguna telah diblokir.</string>
+    <string name="error_block_user">Aduh, gagal blokir. Coba lagi, ya!</string>
+    <string name="error_unblock_user">Aduh, gagal buka blokir. Coba lagi, ya!</string>
+    <string name="error_blocked_users_load">Gagal memuat daftar pengguna yang diblokir.</string>
+
+    <!-- Stamps Store (StampsScreen.kt) -->
+    <string name="stamps_screen_title">Toko &amp; Hadiah</string>
+    <string name="stamps_screen_section_claim_rewards">Check-In Harian</string>
+    <string name="stamps_screen_section_buy_stamps">Beli Prangko</string>
+    <string name="stamps_screen_section_buy_paper">Beli Kertas</string>
+    <string name="stamps_screen_section_subscribe">Berlangganan</string>
+    <string name="stamps_screen_section_supporter_club">Supporter Club</string>
+
+    <string name="stamps_streak_header">Streak %1$d Hari</string>
+    <string name="stamps_streak_subtitle">Check-in setiap hari untuk kumpulkan Energi &amp; Prangko langka!</string>
+    <string name="stamps_claim_daily_cta">Klaim Hari Ini (+%1$d Energi)</string>
+    <string name="stamps_claimed_today_label">Sudah Diklaim Hari Ini ✓</string>
+    <string name="stamps_next_claim_in">Klaim berikutnya dalam %1$s</string>
+    <string name="stamps_next_claim_available_now">Tersedia sekarang!</string>
+    <string name="stamps_day_label">Hari %1$d</string>
+    <string name="stamps_day_7_grand_reward">Hadiah Spesial</string>
+    <string name="stamps_quests_section_title">Misi Harian</string>
+    <string name="stamps_quest_claim_cta">Klaim</string>
+    <string name="stamps_quest_claimed_label">Selesai</string>
+    <string name="stamps_user_energy_label">Energi Peny</string>
+    <!-- InviteFriendsPromoCard.kt — entry point tetap ke Invite Friends, bukan baris quest yang bisa diklaim -->
+    <string name="stamps_invite_promo_title">Ajak Teman, Dapat +30 Energi! ⚡</string>
+    <string name="stamps_invite_promo_body">Begitu temanmu kirim surat pertama, kamu dapat +30 Energi &amp; dia dapat +15 buat mulai nulis 💌</string>
+    <string name="stamps_claim_celebration_title">Hadiah Berhasil Diklaim!</string>
+    <string name="stamps_claim_celebration_body">Kamu mendapatkan +%1$d Energi. Pertahankan streak-mu!</string>
+    <string name="stamps_milestone_dialog_title">Hadiah Hari ke-%1$d</string>
+    <string name="stamps_milestone_day3_item">Bonus: Segel Lilin Emas 🌟</string>
+    <string name="stamps_milestone_day7_item">Grand Prize: Prangko Langka Peny Aurora 👑</string>
+    <string name="stamps_milestone_status_claimed">Sudah Diklaim ✓</string>
+    <string name="stamps_milestone_status_available">Siap Diklaim Hari Ini! Ketuk tombol di bawah.</string>
+    <string name="stamps_milestone_status_locked">Terkunci · Lanjutkan streak kamu besok.</string>
+    <string name="stamps_milestone_close">Tutup</string>
+
+    <string name="stamps_screen_back_desc">Kembali</string>
+    <string name="stamps_screen_reward_daily_title">Prangko Harian</string>
+    <string name="stamps_screen_reward_daily_subtitle">Kembali besok untuk prangko gratis lainnya.</string>
+    <string name="stamps_screen_reward_claim_cta">Klaim</string>
+    <string name="stamps_screen_reward_claimed_label">Diklaim</string>
+
+    <string name="stamps_screen_pack_starter_title">Paket Rose</string>
+    <string name="stamps_screen_pack_starter_subtitle">5 prangko · %1$s</string>
+    <string name="stamps_screen_pack_ocean_title">Paket Ocean</string>
+    <string name="stamps_screen_pack_ocean_subtitle">5 prangko · %1$s</string>
+    <string name="stamps_screen_pack_marigold_title">Paket Marigold</string>
+    <string name="stamps_screen_pack_marigold_subtitle">5 prangko · %1$s</string>
+    <string name="stamps_screen_pack_sage_title">Paket Sage</string>
+    <string name="stamps_screen_pack_sage_subtitle">5 prangko · %1$s</string>
+    <string name="stamps_screen_pack_plum_title">Paket Plum</string>
+    <string name="stamps_screen_pack_plum_subtitle">5 prangko · %1$s</string>
+    <string name="stamps_screen_pack_ink_title">Paket Ink</string>
+    <string name="stamps_screen_pack_ink_subtitle">5 prangko · %1$s</string>
+
+    <string name="stamps_screen_paper_grid_title">Kertas Kotak-Kotak</string>
+    <string name="stamps_screen_paper_grid_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_lined_title">Kertas Bergaris</string>
+    <string name="stamps_screen_paper_lined_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_indigo_title">Kertas Nila</string>
+    <string name="stamps_screen_paper_indigo_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_aged_kraft_title">Kertas Kraft Tua</string>
+    <string name="stamps_screen_paper_aged_kraft_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_soft_beige_title">Kertas Krem Lembut</string>
+    <string name="stamps_screen_paper_soft_beige_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_dotted_title">Kertas Titik-Titik</string>
+    <string name="stamps_screen_paper_dotted_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_plain_white_title">Kertas Putih Polos</string>
+    <string name="stamps_screen_paper_plain_white_subtitle">10 lembar · %1$s</string>
+    <string name="stamps_screen_paper_blush_marble_title">Kertas Marmer Pink</string>
+    <string name="stamps_screen_paper_blush_marble_subtitle">10 lembar · %1$s</string>
+
+    <string name="stamps_screen_plan_monthly_title">Peny Premium</string>
+    <string name="stamps_screen_plan_monthly_subtitle">Penpal tanpa batas, amplop eksklusif, dan tanpa iklan.</string>
+    <string name="stamps_screen_plan_subscribe_cta">Berlangganan</string>
+
+    <string name="stamps_screen_supporter_club_title">Peny Supporter</string>
+    <string name="stamps_screen_supporter_club_subtitle">Dukung Peny langsung dan dapatkan lencana supporter di profilmu.</string>
+
+    <string name="stamps_screen_coming_soon_buy_stamps">Beli Prangko</string>
+    <string name="stamps_screen_coming_soon_buy_paper">Beli Kertas</string>
+    <string name="stamps_screen_coming_soon_subscribe">Berlangganan</string>
+    <string name="stamps_screen_coming_soon_supporter_club">Supporter Club</string>
+
+    <string name="stamps_screen_tab_hadiah">Hadiah</string>
+    <string name="stamps_screen_tab_energi">Energi</string>
+    <string name="stamps_energy_store_title">Isi Energi Peni, Yuk! ⚡</string>
+    <string name="stamps_energy_store_body">Energi bikin semua trik ajaib Peni jalan. Nih, buat apa aja manfaatnya:</string>
+    <string name="stamps_energy_store_benefit_delivery_title">Surat Mendarat Secepat Kilat</string>
+    <string name="stamps_energy_store_benefit_delivery_body">Lompatin antrean seluncur Peni — buka surat sahabat penamu detik itu juga!</string>
+    <string name="stamps_energy_store_benefit_peny_title">Buku Ajaib, Peni Ikut Nulis</string>
+    <string name="stamps_energy_store_benefit_peny_body">Lagi buntu kata? Biar Peni bantu tuliskan balasan suratmu.</string>
+    <string name="stamps_energy_store_benefit_shop_title">Perangko &amp; Kertas Kece</string>
+    <string name="stamps_energy_store_benefit_shop_body">Tukar Energi jadi koleksi perangko unik dan kertas surat yang bikin suratmu makin cantik.</string>
+    <string name="stamps_energy_store_cta">Isi Energi Peni, Wusss! ⚡</string>
+    <string name="stamps_screen_tab_store">Toko</string>
+    <!-- Peny Store: Filter labels -->
+    <string name="store_filter_all">Semua</string>
+    <string name="store_filter_prangko">Prangko</string>
+    <string name="store_filter_kertas">Kertas</string>
+    <string name="store_filter_stiker">Stiker</string>
+    <string name="store_filter_amplop">Amplop</string>
+    <string name="store_filter_bundle">Bundle</string>
+    <!-- Peny Store: Labels & UI copy -->
+    <string name="store_detail_assets_preview">Isi Paket</string>
+    <string name="store_likes_label">suka</string>
+    <string name="store_cta_buy">Beli — %1$s</string>
+    <string name="store_cta_owned">Sudah Dimiliki ✓</string>
+    <string name="store_view_external_link">Kunjungi Profil</string>
+    <string name="store_error_open_link">Gagal membuka tautan profil</string>
+    <string name="store_empty_catalog">Belum ada produk tersedia.\nNantikan koleksi pertama dari kreator kami!</string>
+    <string name="store_error_load_failed">Gagal memuat toko. Coba lagi.</string>
+    <string name="store_purchase_success_title">Sentuhan Indah untuk Suratmu</string>
+    <string name="store_purchase_success_body">Terima kasih telah mengapresiasi karya kreator! Koleksi istimewa ini kini tersimpan rapi di laci meja tulismu, siap menemani setiap cerita tulus yang kamu kirimkan ke sahabat pena.</string>
+    <string name="store_purchase_celebration_badge">✨ KOLEKSI BARU UNTUK MEJA TULISMU</string>
+    <string name="store_purchase_celebration_keep_cta">Simpan ke Meja Tulis</string>
+    <string name="store_purchase_celebration_explore_cta">Lihat Koleksi Lainnya</string>
+    <string name="error_store_purchase_failed">Pembelian gagal. Silakan coba lagi.</string>
+    <string name="store_by_creator">oleh %1$s</string>
+    <string name="store_badge_stamps_count">🎟 %1$d Prangko</string>
+    <string name="store_badge_stickers_count">✨ %1$d Stiker</string>
+    <string name="store_badge_paper_count">📄 %1$d Kertas</string>
+    <string name="store_badge_envelopes_count">✉️ %1$d Amplop</string>
+
+    <!-- Profile (ProfileScreen.kt + ui/screens/profile/) -->
+    <string name="profile_screen_title">Profil</string>
+    <string name="profile_menu_draft">Draft</string>
+    <string name="profile_menu_address_book">Buku Alamat</string>
+    <string name="profile_menu_stamp_book">Buku Prangko</string>
+    <string name="profile_menu_tips">Tips</string>
+    <string name="profile_menu_settings">Pengaturan</string>
+    <string name="profile_back_desc">Kembali</string>
+
+    <string name="profile_draft_title">Draft</string>
+
+    <string name="profile_address_book_title">Buku Alamat</string>
+    <string name="profile_address_book_empty_title">Belum Ada Kontak</string>
+    <string name="profile_address_book_empty_body">Kontak sahabat pena yang kamu simpan dari profil publik akan muncul di sini.</string>
+    <string name="profile_address_book_delete_dialog_title">Hapus Kontak</string>
+    <string name="profile_address_book_delete_dialog_body">Yakin ingin menghapus %1$s dari buku alamatmu?</string>
+    <string name="profile_address_book_delete_confirm_cta">Hapus</string>
+    <string name="profile_address_book_delete_cancel_cta">Batal</string>
+    <string name="profile_address_book_load_error">Gagal memuat buku alamat. Silakan coba lagi.</string>
+    <string name="profile_address_book_delete_error">Gagal menghapus kontak. Silakan coba lagi.</string>
+
+    <string name="profile_invite_title">Undang Teman</string>
+    <string name="profile_invite_section_share_title">Kode Undanganmu</string>
+    <string name="profile_invite_section_share_body">Bagikan kode atau link-mu — begitu temanmu kirim surat pertama, kalian berdua dapat bonus energi: kamu +30, dia +15 🎁</string>
+    <string name="profile_invite_copy_cta">Salin</string>
+    <string name="profile_invite_copy_success">Kode disalin!</string>
+    <string name="profile_invite_share_cta">Bagikan</string>
+    <string name="profile_invite_share_message">Yuk gabung nulis surat bareng aku di PenyPost ✉️ Pakai kode %1$s atau klik: %2$s</string>
+    <string name="profile_invite_share_chooser_title">Bagikan undangan lewat</string>
+    <string name="profile_invite_generate_retry_cta">Coba Lagi</string>
+    <string name="profile_invite_section_redeem_title">Punya Kode Undangan Teman?</string>
+    <string name="profile_invite_section_redeem_body">Masukkan di bawah ini buat langsung terhubung sama mereka.</string>
+    <string name="profile_invite_redeem_label">Kode undangan</string>
+    <string name="profile_invite_redeem_placeholder">mis. K7XQ2A</string>
+    <string name="profile_invite_redeem_cta">Tambah Teman</string>
+    <string name="profile_invite_redeem_success_title">Kalian Terhubung! 💌</string>
+    <string name="profile_invite_redeem_success_body">Kamu dan %1$s sekarang ada di buku alamat masing-masing.</string>
+    <string name="profile_invite_redeem_success_cta">Asyik!</string>
+
+    <string name="profile_stamp_book_title">Buku Prangko</string>
+    <string name="profile_stamp_book_locked_desc">Terkunci</string>
+
+    <string name="profile_keepsake_title">Buku Kenangan Snail Mail</string>
+    <string name="profile_keepsake_subtitle">Koleksi prangko, kertas surat, amplop &amp; stiker yang kamu miliki</string>
+    <string name="profile_keepsake_badge">Kotak Surat &amp; Kenangan</string>
+    <string name="profile_keepsake_quote">Setiap prangko, kertas surat, dan stiker menyimpan jejak cerita suratmu.</string>
+    <string name="profile_keepsake_tab_all">Semua</string>
+    <string name="profile_keepsake_tab_stamps">Prangko</string>
+    <string name="profile_keepsake_tab_papers">Kertas</string>
+    <string name="profile_keepsake_tab_stickers">Stiker</string>
+    <string name="profile_keepsake_tab_envelopes">Amplop</string>
+    <string name="profile_keepsake_empty_title">Buku kenanganmu masih kosong</string>
+    <string name="profile_keepsake_empty_body">Jelajahi Peny Store untuk mengoleksi prangko antik, kertas surat indah, amplop, dan stiker karya kreator!</string>
+    <string name="profile_keepsake_empty_cta">Jelajahi Peny Store</string>
+    <string name="profile_keepsake_inspect_title">Detail Koleksi</string>
+    <string name="profile_keepsake_inspect_close">Tutup</string>
+    <string name="profile_keepsake_creator_credit">Karya %1$s</string>
+    <string name="profile_keepsake_unlocked_date">Dikoleksi pada %1$s</string>
+    <string name="profile_keepsake_official_badge">Koleksi Resmi Peny Store</string>
+    <string name="profile_keepsake_retry">Coba Lagi</string>
+    <string name="profile_keepsake_meta_creator">Kreator</string>
+    <string name="profile_keepsake_meta_collected">Diperoleh</string>
+    <string name="profile_keepsake_meta_type">Tipe</string>
+    <string name="profile_keepsake_type_stamp">Prangko</string>
+    <string name="profile_keepsake_type_paper">Kertas Surat</string>
+    <string name="profile_keepsake_type_sticker">Stiker</string>
+    <string name="profile_keepsake_type_envelope">Amplop</string>
+
+    <!-- App Update (AppUpdateDialog.kt / AppUpdateViewModel.kt) -->
+    <string name="app_update_mandatory_title">Pembaruan Diperlukan</string>
+    <string name="app_update_mandatory_body">Versi baru PenyPost diperlukan agar pengiriman surat tetap lancar. Silakan perbarui sekarang untuk melanjutkan perjalananmu!</string>
+    <string name="app_update_optional_title">Pembaruan Tersedia! 🐧</string>
+    <string name="app_update_optional_body">Versi terbaru PenyPost sudah hadir dengan fitur dan perbaikan baru. Mau perbarui sekarang?</string>
+    <string name="app_update_cta">Perbarui Sekarang</string>
+    <string name="app_update_later">Nanti Saja</string>
+    <string name="app_update_downloaded_message">Pembaruan telah selesai diunduh dan siap dipasang!</string>
+    <string name="app_update_downloaded_action">Mulai Ulang</string>
+
+    <string name="profile_tips_title">Tips &amp; Panduan</string>
+    <string name="profile_tips_delivery_time_title">Cara kerja pengantaran surat lambat</string>
+    <string name="profile_tips_delivery_time_body">PenyPost menyimulasikan perjalanan pos nyata! Waktu antar surat dihitung berdasarkan jarak geografis antar negara. Surat yang melintasi benua butuh beberapa jam untuk sampai, menghidupkan kembali nostalgia menunggu surat yang hangat.</string>
+    <string name="profile_tips_first_letter_title">Nulis surat pertamamu</string>
+    <string name="profile_tips_first_letter_body">Pilih penpal, pilih kertas surat yang hangat, dan perkenalkan dirimu! Ceritakan keseharian, hobi, atau budayamu — cerita yang tulus akan membangun persahabatan yang erat.</string>
+    <string name="profile_tips_customize_letter_title">Menghias &amp; mempercantik surat</string>
+    <string name="profile_tips_customize_letter_body">Buat suratmu istimewa dengan berbagai template kertas, pilihan font estetik, coretan tangan, dan stiker lucu. Gunakan peralatan kanvas saat menulis untuk mengekspresikan ceritamu.</string>
+    <string name="profile_tips_drafts_title">Draft tersimpan otomatis</string>
+    <string name="profile_tips_drafts_body">Tulis surat panjang tanpa terburu-buru. Tulisanmu otomatis tersimpan sebagai draft, jadi kamu bisa melanjutkannya kapan saja tanpa takut hilang.</string>
+    <string name="profile_tips_stamps_title">Gimana cara kerja prangko?</string>
+    <string name="profile_tips_stamps_body">Setiap surat yang kamu kirim memerlukan satu prangko dari koleksimu. Ambil prangko gratis harian atau kumpulkan prangko bertema khusus untuk melengkapi Buku Prangkomu.</string>
+    <string name="profile_tips_penpals_title">Mencari teman pena yang cocok</string>
+    <string name="profile_tips_penpals_body">Jelajahi tab PenPals dan gunakan filter benua, bahasa, serta minat yang sama untuk menemukan sahabat pena baru dengan hobi serupa dari seluruh dunia.</string>
+    <string name="profile_tips_postal_collection_title">Showcase Koleksi Pos</string>
+    <string name="profile_tips_postal_collection_body">Pamerkan surat dan amplop favorit yang kamu terima di profil publikmu. Kamu bisa mengatur visibilitas koleksi kapan saja dari profil atau tampilan surat.</string>
+    <string name="profile_tips_delivery_hours_title">Waktu pengantaran surat harian</string>
+    <string name="profile_tips_delivery_hours_body">Di Pengaturan Profil, kamu bisa menentukan jam pengantaran surat favorit agar surat baru tiba di waktu santaimu menikmati bacaan.</string>
+    <string name="profile_tips_sign_in_title">Kenapa harus masuk akun?</string>
+    <string name="profile_tips_sign_in_body">Masuk akun menyimpan penpal, arsip surat, draft, dan koleksi prangkomu secara aman agar tidak hilang saat berganti perangkat.</string>
+    <string name="profile_tips_safety_title">Tetap aman dan ramah</string>
+    <string name="profile_tips_safety_body">Jaga privasi datamu. Jangan pernah membagikan alamat rumah asli, nomor telepon, atau data sensitif. Kamu bisa memblokir atau melaporkan pengguna kapan saja jika menemukan surat yang tidak pantas.</string>
+    <string name="profile_tips_envelope_quality_title">Kenapa amplopku kadang terlihat kurang tajam?</string>
+    <string name="profile_tips_envelope_quality_body">Biar prangko, stiker, dan desain kertas amplopmu tampil persis seperti yang kamu buat, kami mengambil gambar amplop saat kamu tekan Kirim. Di beberapa perangkat kelas bawah, hasil gambar ini bisa terlihat sedikit kurang tajam dibanding saat kamu mendekorasinya — itu wajar, bukan bug, dan suratmu tetap terkirim dengan baik.</string>
+
+    <!-- Profile content (ui/screens/profile/widgets/ProfileWidgets.kt) -->
+    <string name="profile_content_pass_title">PenyPost</string>
+    <string name="profile_content_settings_desc">Pengaturan</string>
+    <string name="profile_content_default_nickname">Pengguna Penpal</string>
+    <string name="profile_content_verified_desc">Terverifikasi</string>
+    <string name="profile_content_age_years">%1$d thn</string>
+    <string name="profile_content_interests_label">MINAT</string>
+    <string name="profile_content_languages_label">BAHASA</string>
+    <string name="profile_content_postal_collection_label">POSTAL COLLECTION</string>
+    <string name="profile_content_tab_envelopes">Amplop</string>
+    <string name="profile_content_tab_paper">Kertas</string>
+    <string name="profile_content_stat_drafts_title">Draft</string>
+    <string name="profile_content_stat_drafts_subtitle">Kelola</string>
+    <string name="profile_content_stat_address_book_subtitle">Tersimpan</string>
+    <string name="profile_content_stat_stamp_book_subtitle">Koleksi</string>
+    <string name="profile_content_invite_title">Undang Teman</string>
+    <string name="profile_content_invite_subtitle">Dapatkan kode, langsung terhubung</string>
+    <string name="profile_content_tips_title">Tips &amp; Keamanan Penpal</string>
+    <string name="profile_content_tips_subtitle">Pelajari cara menulis surat yang bermakna dengan aman</string>
+    <string name="profile_content_postal_collection_empty">Surat yang kamu publikasikan bakal muncul di sini — nyalain \"Tampilkan di Postal Collection\" pas nulis surat.</string>
+    <string name="profile_update_photo_desc">Ubah Foto Profil</string>
+    <string name="profile_photo_updated_success">Foto profil berhasil diperbarui</string>
+    <string name="profile_content_showcase_more_desc">Opsi lainnya</string>
+    <string name="profile_content_showcase_no_preview_desc">Kenapa gak ada gambar preview?</string>
+    <string name="profile_content_showcase_no_preview_caption">Kenapa teks, bukan gambar?</string>
+    <string name="profile_content_showcase_pause">Jeda</string>
+    <string name="profile_content_showcase_reactivate">Aktifkan Lagi</string>
+    <string name="profile_content_showcase_delete">Hapus</string>
+    <string name="profile_content_showcase_pause_dialog_title">Jeda surat ini?</string>
+    <string name="profile_content_showcase_pause_dialog_body">Surat ini bakal hilang dari Postal Collection kamu sampai kamu aktifkan lagi — suratnya sendiri nggak kenapa-kenapa.</string>
+    <string name="profile_content_showcase_pause_dialog_confirm">Jeda</string>
+    <string name="profile_content_showcase_pause_dialog_cancel">Batal</string>
+    <string name="profile_content_showcase_reactivate_dialog_title">Tampilkan surat ini lagi?</string>
+    <string name="profile_content_showcase_reactivate_dialog_body">Surat ini bakal muncul lagi di Postal Collection kamu, kelihatan sama siapa aja yang buka profil kamu.</string>
+    <string name="profile_content_showcase_reactivate_dialog_confirm">Aktifkan Lagi</string>
+    <string name="profile_content_showcase_reactivate_dialog_cancel">Batal</string>
+
+    <string name="profile_settings_title">Pengaturan</string>
+    <string name="profile_settings_subscription">Langganan</string>
+    <string name="profile_settings_cache">Cache</string>
+    <string name="profile_settings_cache_size">%1$s terpakai</string>
+    <string name="profile_settings_language">Bahasa</string>
+    <string name="profile_settings_notify_hour">Waktu Surat Harian</string>
+    <string name="profile_settings_notify_hour_picker_title">Kapan kamu mau dapat tumpukan surat baru?</string>
+    <string name="profile_settings_notify_hour_picker_subtitle">Peny bakal kasih tumpukan surat segar sekitar jam ini tiap hari.</string>
+    <string name="language_picker_title">Pilih Bahasa</string>
+    <string name="language_picker_subtitle">Pilih bahasa aplikasi yang kamu inginkan</string>
+    <string name="profile_settings_contact_us">Hubungi Kami</string>
+    <string name="profile_settings_contact_us_email_subject">Halo tim PenyPost!</string>
+    <string name="profile_settings_contact_us_no_email_app">Tidak ada aplikasi email ditemukan</string>
+    <string name="profile_settings_privacy_policy">Kebijakan Privasi</string>
+    <string name="profile_settings_report_bug">Laporkan Bug</string>
+    <string name="profile_settings_love_us">Sukai Kami</string>
+    <string name="profile_settings_blocked_users">Pengguna Diblokir</string>
+    <string name="profile_settings_logout">Keluar</string>
+    <string name="profile_settings_delete_account">Hapus Akun</string>
+
+    <!-- Clear cache confirmation (ProfileSettingsScreen.kt) -->
+    <string name="clear_cache_dialog_title">Hapus Cache? 🧹</string>
+    <string name="clear_cache_dialog_body">Menghapus cache akan menghapus semua file sementara dan draf surat yang belum dikirim. Apakah kamu yakin?</string>
+    <string name="clear_cache_dialog_cta_confirm">Hapus Cache</string>
+    <string name="clear_cache_dialog_cta_cancel">Batal</string>
+    <string name="clear_cache_success">Cache berhasil dibersihkan</string>
+
+    <!-- Delete account confirmation (ProfileSettingsScreen.kt) -->
+    <string name="delete_account_dialog_title">Hapus Akun Kamu? ⚠️</string>
+    <string name="delete_account_dialog_body">Akun kamu akan dinonaktifkan secara permanen dan tidak bisa dipulihkan kembali. Apakah kamu yakin?</string>
+    <string name="delete_account_dialog_cta_confirm">Ya, Hapus Akun</string>
+    <string name="delete_account_dialog_cta_cancel">Batal</string>
+    <string name="delete_account_error">Gagal menghapus akun. Silakan coba lagi.</string>
+
+
+    <!-- Splash (SplashScreen.kt) -->
+    <string name="splash_logo_desc">Logo PenyPost</string>
+    <string name="splash_title">Wusss! Peny mendarat aman! 🐧💌</string>
+    <string name="splash_subtitle">Merapikan tas surat sebelum meluncur ke layar kamu…</string>
+
+    <!-- Welcome carousel (WelcomeCarouselScreen.kt) -->
+    <string name="welcome_slide1_title">Tulis Surat Hangat ✉️</string>
+    <string name="welcome_slide1_body">Rehat sejenak dan bagikan cerita hangat dengan sahabat pena di seluruh dunia.</string>
+    <string name="welcome_slide2_title">Sapa Teman Baru 🌍</string>
+    <string name="welcome_slide2_body">Terhubung dengan sahabat baru dari berbagai belahan benua.</string>
+    <string name="welcome_slide3_title">Peny Siap Berseluncur! 🐧💨</string>
+    <string name="welcome_slide3_body">Kurir pos Antartika pribadi siap mengantarkan suratmu sampai ke tujuan.</string>
+    <string name="welcome_cta_explore">Lihat-Lihat Dulu</string>
+    <string name="welcome_google_short">Google</string>
+
+    <!-- Login (LoginScreen.kt / GoogleSignInButton.kt) -->
+    <string name="login_tagline">Tulis surat.\nSambung dunia.</string>
+    <string name="login_sign_in_cta">Lanjut dengan Google</string>
+    <string name="login_sign_in_section_label">Masuk untuk melanjutkan</string>
+    <string name="login_terms">Dengan masuk, kamu setuju dengan Ketentuan Layanan dan Kebijakan Privasi kami.</string>
+    <string name="login_error_generic">Aduh, Peny tergelincir! Coba lagi ya. 🐧</string>
+    <string name="login_google_icon_desc">Google</string>
+    <string name="login_or_divider">atau</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_placeholder">kamu@contoh.com</string>
+    <string name="login_password_label">Kata Sandi</string>
+    <string name="login_password_placeholder">Minimal 6 karakter</string>
+    <string name="login_password_show_desc">Tampilkan kata sandi</string>
+    <string name="login_password_hide_desc">Sembunyikan kata sandi</string>
+    <string name="login_sign_in_with_email_cta">Masuk</string>
+    <string name="login_sign_up_with_email_cta">Daftar</string>
+    <string name="login_switch_to_sign_up">Belum punya akun? Daftar</string>
+    <string name="login_switch_to_sign_in">Sudah punya akun? Masuk</string>
+    <string name="login_forgot_password">Lupa kata sandi?</string>
+    <string name="login_reset_email_sent">Link reset terkirim! Cek email kamu.</string>
+    <string name="login_reset_email_needs_email">Isi email kamu dulu di atas.</string>
+    <string name="login_continue_with_email">Lanjut dengan Email</string>
+    <string name="login_create_account_tab">Daftar</string>
+    <string name="login_sign_in_tab">Masuk</string>
+    <string name="login_back_to_options">Pilihan Lain</string>
+    <string name="login_password_hint_create">Kata sandi minimal 6 karakter</string>
+
+    <!-- Auth Guard (AuthGuardBottomSheet.kt) -->
+    <string name="auth_guard_title">Sapa dulu, yuk! 💌</string>
+    <string name="auth_guard_body">Masuk sebentar ya, supaya Peny bisa bantu kirimkan suratmu.</string>
+    <string name="auth_guard_cta_sign_in">Masuk atau Daftar</string>
+    <string name="auth_guard_cta_dismiss">Nanti saja</string>
+
+    <!-- Draft-on-Exit (LetterlyCenterDialog.kt / WriteExitGuard.kt) -->
+    <string name="save_draft_dialog_title">Simpan Suratnya Dulu? 💌</string>
+    <string name="save_draft_dialog_body">Peny bisa simpan teksnya jadi draft. Tapi gambar, coretan, sama stiker bakal ikut hilang, ya.</string>
+    <string name="save_draft_dialog_cta_save">Simpan sebagai Draft</string>
+    <string name="save_draft_dialog_cta_discard">Buang Suratnya</string>
+
+    <!-- Draft delete confirmation (ProfileDraftScreen.kt) -->
+    <string name="delete_draft_dialog_title">Yakin Mau Dibuang? 🗑️</string>
+    <string name="delete_draft_dialog_body">Peny sudah cape-cape menjaga surat draf ini, lho. Yakin mau dihapus?</string>
+    <string name="delete_draft_dialog_cta_confirm">Ya, Hapus Saja</string>
+    <string name="delete_draft_dialog_cta_cancel">Batal</string>
+
+    <!-- Logout confirmation (ProfileSettingsScreen.kt) -->
+    <string name="logout_dialog_title">Mau Pergi Dulu? 👋</string>
+    <string name="logout_dialog_body">Kamu bisa balik lagi kapan aja — suratmu bakal tetap aman menunggumu di sini.</string>
+    <string name="logout_dialog_cta_confirm">Ya, Keluar</string>
+    <string name="logout_dialog_cta_cancel">Batal</string>
+
+    <!-- Register (RegisterScreen.kt) -->
+    <string name="register_title">Halo! Aku Peny! 🐧</string>
+    <string name="register_subtitle">Nama panggilanmu siapa? Peny penasaran!</string>
+    <string name="register_nickname_label">Nama Panggilan</string>
+    <string name="register_nickname_placeholder">mis. matahari_senja</string>
+    <string name="register_continent_label">Kamu dari benua mana? 🌎</string>
+    <string name="register_cta">Siap Berseluncur! ✉️</string>
+
+    <!-- Onboarding shared (OnboardingScaffold.kt) -->
+    <string name="onboarding_skip">Lewati</string>
+    <string name="onboarding_step_desc">Langkah %1$d dari %2$d</string>
+
+    <!-- Onboarding step 1 — TOS (OnboardingTosScreen.kt) -->
+    <string name="onboarding_tos_title">Sebelum mulai…</string>
+    <string name="onboarding_tos_subtitle">Baca dan setujui syarat berikut sebelum lanjut ya!</string>
+    <string name="onboarding_tos_checkbox">Saya menyetujui <b>Syarat Layanan</b> dan <b>Kebijakan Privasi</b></string>
+    <string name="onboarding_tos_cta">Setuju &amp; Lanjut ✉️</string>
+    <string name="onboarding_tos_error">Gagal menyetujui syarat layanan. Silakan coba lagi.</string>
+    <string name="legal_document_terms_title">Syarat Layanan</string>
+    <string name="legal_document_privacy_title">Kebijakan Privasi</string>
+    <string name="legal_document_close_desc">Tutup</string>
+
+    <!-- Onboarding step 2 — Permissions (OnboardingPermissionsScreen.kt) -->
+    <string name="onboarding_permissions_title">Biarkan Peny Ketuk Pintumu 🔔</string>
+    <string name="onboarding_permissions_subtitle">Biar Peny bisa jaga suratmu dengan baik, izinkan dua hal kecil ini ya.</string>
+    <string name="onboarding_permissions_notification_title">Notifikasi surat masuk</string>
+    <string name="onboarding_permissions_notification_body">Nyalakan notifikasi supaya Peny bisa langsung kasih tahu saat surat dari sahabat penamu mendarat!</string>
+    <string name="onboarding_permissions_storage_title">Simpan &amp; bagikan surat</string>
+    <string name="onboarding_permissions_storage_body">Izinkan akses galeri biar Peny bisa simpan suratmu yang berkesan atau bagikan ke teman-temanmu!</string>
+    <string name="onboarding_permissions_cta">Boleh, Peny!</string>
+
+    <!-- Onboarding step 3 — Gender &amp; Birthday (OnboardingGenderBirthdayScreen.kt) -->
+    <string name="onboarding_gender_birthday_title">Cerita sedikit dong!</string>
+    <string name="onboarding_gender_birthday_subtitle">Biar Peny bisa cariin penpal yang cocok buatmu! 🐧</string>
+    <string name="onboarding_gender_label">Jenis Kelamin</string>
+    <string name="onboarding_gender_male">Laki-laki</string>
+    <string name="onboarding_gender_female">Perempuan</string>
+    <string name="onboarding_birthday_label">Tanggal Lahir</string>
+    <string name="onboarding_birthday_placeholder">Pilih tanggal lahirmu</string>
+    <string name="onboarding_birthday_age_gate_error">Kamu harus berusia minimal %1$d tahun untuk menggunakan Peny.</string>
+    <string name="onboarding_gender_birthday_cta">Lanjut ✉️</string>
+
+    <!-- Onboarding step 4 — Language &amp; Bio (OnboardingLanguageBioScreen.kt) -->
+    <string name="onboarding_language_bio_title">Bahasa &amp; bio</string>
+    <string name="onboarding_language_bio_subtitle">Kenalkan dirimu ke sahabat pena! ✉️</string>
+    <string name="onboarding_language_label">Bahasa yang kamu kuasai</string>
+    <string name="onboarding_language_card_hint">Ketuk untuk memilih bahasa</string>
+    <string name="onboarding_language_picker_sheet_title">Pilih Bahasa Surat</string>
+    <string name="onboarding_language_picker_sheet_subtitle">Pilih satu atau lebih bahasa yang kamu kuasai</string>
+    <string name="onboarding_language_search_placeholder">Cari bahasa…</string>
+    <string name="onboarding_language_done_cta">Simpan (%1$d dipilih)</string>
+    <string name="onboarding_bio_label">Bio</string>
+    <string name="onboarding_bio_placeholder">Ceritain sedikit tentang dirimu…</string>
+    <string name="onboarding_bio_counter">%1$d / %2$d</string>
+    <string name="onboarding_language_bio_cta">Lanjut ✉️</string>
+
+    <!-- Onboarding step 5 — Photo (OnboardingPhotoScreen.kt) -->
+    <string name="onboarding_photo_title">Foto Profil</string>
+    <string name="onboarding_photo_subtitle">Biar sahabat penamu tahu wajahmu! 💌</string>
+    <string name="onboarding_photo_pick_hint">Ketuk lingkaran buat pilih foto dari galerimu.</string>
+    <string name="onboarding_photo_pick_hint_change">Ketuk buat ganti foto.</string>
+    <string name="onboarding_photo_cta">Lanjut tanpa foto dulu</string>
+    <string name="onboarding_photo_cta_with_photo">Lanjut dengan Foto Ini ✉️</string>
+
+    <!-- Onboarding step 6 — Interests (OnboardingInterestsScreen.kt) -->
+    <string name="onboarding_interests_title">Kamu suka apa aja?</string>
+    <string name="onboarding_interests_subtitle">Pilih beberapa — Peny cariin penpal yang selera sama! 🐧</string>
+    <string name="onboarding_interests_empty">Waduh, Peny gagal muat daftar minat.</string>
+    <string name="onboarding_interests_retry">Coba lagi</string>
+    <string name="onboarding_interests_cta_done">Yuk, Mulai! 🐧</string>
+
+    <!-- Onboarding step 7 — Notify hour (OnboardingNotifyHourPrefScreen.kt) -->
+    <string name="onboarding_notify_hour_title">Kapan kamu mau dapat tumpukan surat baru?</string>
+    <string name="onboarding_notify_hour_subtitle">Peny bakal kasih tumpukan surat segar sekitar jam ini tiap hari. Bisa diubah kapan aja lewat Pengaturan.</string>
+    <string name="onboarding_notify_hour_morning">🌅 Pagi</string>
+    <string name="onboarding_notify_hour_afternoon">☀️ Siang</string>
+    <string name="onboarding_notify_hour_evening">🌙 Malam</string>
+    <string name="onboarding_notify_hour_cta">Yuk, Mulai! 🐧</string>
+
+    <!-- Error Messages (NetworkErrorUtils.kt) -->
+    <string name="error_unauthorized">Silakan masuk terlebih dahulu untuk mengakses fitur ini.</string>
+    <string name="error_forbidden">Akses tidak diizinkan.</string>
+    <string name="error_not_found">Konten tidak ditemukan.</string>
+    <string name="error_server">Layanan sedang bermasalah. Silakan coba lagi nanti.</string>
+    <string name="error_network">Tidak dapat terhubung ke server. Periksa koneksi internet Anda.</string>
+    <string name="error_generic">Terjadi kesalahan. Silakan coba lagi.</string>
+    <string name="error_penpals_feed">Gagal memuat feed penpal</string>
+    <string name="error_penpals_like">Gagal memperbarui suka</string>
+    <string name="error_penpals_regions">Gagal memuat daftar wilayah</string>
+    <string name="error_penpals_refresh">Gagal me-refresh feed</string>
+    <string name="error_penpals_refresh_insufficient_energy">Energi kamu tidak cukup untuk refresh feed.</string>
+    <string name="error_letters_send">Gagal mengirim surat</string>
+    <string name="error_letters_inbox">Gagal memuat surat masuk</string>
+    <string name="error_letters_detail">Gagal memuat detail surat</string>
+    <string name="error_letters_unlock">Gagal mempercepat surat ini, coba lagi</string>
+    <string name="error_letters_unlock_insufficient_energy">Energi kurang — butuh %1$d, sisa %2$d</string>
+    <string name="error_stamps_energy_purchase_failed">Aduh, Peny tergelincir! Coba lagi ya. 🐧</string>
+    <string name="error_letters_showcase">Gagal memuat Postal Collection</string>
+    <string name="error_letters_showcase_update">Gagal memperbarui item ini, coba lagi</string>
+    <string name="error_mailbox_list">Gagal memuat mailbox</string>
+    <string name="error_mailbox_thread">Gagal memuat percakapan</string>
+    <string name="error_storage_presign">Gagal menyiapkan unggahan gambar</string>
+    <string name="error_storage_upload">Gagal mengunggah gambar surat</string>
+    <string name="error_storage_presign_photo">Gagal menyiapkan unggahan foto</string>
+    <string name="error_storage_upload_photo">Gagal mengunggah foto profil</string>
+
+    <!-- Push notifications (PenyPostMessagingService.kt) -->
+    <string name="fcm_notification_channel_name">Surat masuk</string>
+    <string name="fcm_notification_channel_description">Diberi tahu saat surat baru dari sahabat penamu tiba.</string>
+
+    <!-- Daily unread-mail reminder (UnreadReminderWorker.kt) -->
+    <string name="unread_reminder_channel_name">Pengingat surat belum dibaca</string>
+    <string name="unread_reminder_channel_description">Pengingat sekali sehari kalau kamu masih punya surat yang belum dibaca.</string>
+    <string name="unread_reminder_notification_title">Jangan lupa cek suratmu! 💌</string>
+    <plurals name="unread_reminder_notification_body">
+        <item quantity="other">Kamu punya %1$d surat yang belum dibaca.</item>
+    </plurals>
+    <string name="error_catalog_envelopes">Gagal memuat desain amplop</string>
+    <string name="error_catalog_stamps">Gagal memuat desain prangko</string>
+    <string name="error_catalog_stickers">Gagal memuat desain stiker</string>
+    <string name="error_penpals_match">Belum ada penpal di wilayah ini — coba wilayah lain, yuk!</string>
+    <string name="compose_validation_body_too_short">Cerita dikit dong, jangan cuma salam 😄</string>
+    <string name="error_auth_signin">Gagal masuk</string>
+    <string name="error_auth_profile">Gagal memuat profil</string>
+    <string name="error_auth_register">Gagal melakukan pendaftaran</string>
+    <string name="error_auth_update_profile">Gagal memperbarui profil</string>
+    <string name="error_auth_update_interests">Gagal memperbarui minat</string>
+    <string name="error_auth_interests">Gagal memuat daftar minat</string>
+    <string name="error_auth_update_languages">Gagal memperbarui bahasa</string>
+    <string name="error_auth_email_weak_password">Kata sandi minimal 6 karakter.</string>
+    <string name="error_auth_email_already_in_use">Akun dengan email itu sudah ada — coba masuk aja.</string>
+    <string name="error_auth_email_user_not_found">Gak ada akun dengan email itu.</string>
+    <string name="error_auth_email_invalid_credentials">Email atau kata sandi salah.</string>
+    <string name="error_auth_email_generic">Terjadi kesalahan. Coba lagi.</string>
+
+    <!-- ── Public profile bottom sheet ───────────────────────────────────── -->
+    <string name="public_profile_not_found_title">Profil tidak tersedia</string>
+    <string name="public_profile_not_found_body">Profil pengguna ini tidak dapat ditemukan.</string>
+    <string name="public_profile_online_now">Sedang online</string>
+    <string name="public_profile_last_seen_unknown">Terakhir aktif tidak diketahui</string>
+    <string name="public_profile_member_label">Anggota PenyPost</string>
+    <string name="public_profile_about_section_label">TENTANG AKU</string>
+    <string name="public_profile_interests_section_label">MINAT &amp; HOBI</string>
+    <string name="public_profile_more_desc">Opsi lainnya</string>
+    <string name="public_profile_menu_report">Laporkan</string>
+    <string name="public_profile_menu_add_to_address_book">Tambah ke Buku Alamat</string>
+    <string name="public_profile_menu_block">Blokir Pengguna</string>
+    <string name="public_profile_add_to_address_book_dialog_title">Tambah %1$s ke buku alamatmu?</string>
+    <string name="public_profile_add_to_address_book_dialog_body">Kalian berdua bakal saling ditambahkan ke buku alamat masing-masing, jadi gampang kirim surat bolak-balik.</string>
+    <string name="public_profile_add_to_address_book_cta_send">Kirim Permintaan</string>
+    <string name="public_profile_add_to_address_book_cta_cancel">Batal</string>
+    <string name="public_profile_address_book_sent_dialog_title">Permintaan Terkirim! 💌</string>
+    <string name="public_profile_address_book_sent_dialog_body">Permintaan pertemanan berhasil dikirim. Kalian berdua sekarang sudah ada di buku alamat masing-masing.</string>
+    <string name="public_profile_address_book_sent_dialog_cta">Asyik!</string>
+    <string name="public_profile_report_submitted_toast">Laporan terkirim. Makasih udah bantu jaga PenyPost tetap aman.</string>
+    <string name="error_address_book_add">Aduh, gagal terkirim. Coba lagi, ya!</string>
+    <string name="error_invite_generate">Gagal bikin kode undangan. Coba lagi, ya.</string>
+    <string name="error_invite_redeem">Kode undangan itu gak berhasil. Cek lagi kodenya dan coba sekali lagi.</string>
+
+    <!-- ── Blocked Users settings screen (BlockedUsersScreen.kt) ────────────── -->
+    <string name="blocked_users_title">Pengguna Diblokir</string>
+    <string name="blocked_users_empty_title">Belum ada pengguna yang diblokir</string>
+    <string name="blocked_users_empty_body">Pengguna yang kamu blokir akan muncul di sini.</string>
+    <string name="blocked_users_blocked_on_label">Diblokir pada %1$s</string>
+    <string name="blocked_users_unblock_cta">Buka Blokir</string>
+    <string name="unblock_user_confirm_dialog_title">Buka blokir %1$s?</string>
+    <string name="unblock_user_confirm_dialog_body">Kalian akan bisa saling kirim surat dan lihat profil lagi.</string>
+    <string name="unblock_user_confirm_dialog_cta_confirm">Buka Blokir</string>
+    <string name="unblock_user_confirm_dialog_cta_cancel">Batal</string>
+
+    <!-- ── Open letter session end ────────────────────────────────────────── -->
+    <string name="open_letter_end_of_session_title">Sesi Surat Mentok</string>
+    <string name="open_letter_end_of_session_subtitle">Kamu telah membaca semua surat di sesi ini. Ketuk untuk kembali ke Postal Desk.</string>
+    <string name="open_letter_page_indicator">Surat %1$d dari %2$d • Geser ke atas untuk surat berikutnya</string>
+
+    <!-- ── Select Recipient & Region Picker ──────────────────────────────── -->
+    <string name="select_recipient_title_selecting">Pilih Penerima</string>
+    <string name="select_recipient_title_ready">Siap Dikirim</string>
+    <string name="select_recipient_back_desc">Kembali</string>
+    <string name="select_recipient_add_recipient">Tambah Penerima</string>
+    <string name="select_recipient_hint_add_recipient">Ketuk tombol di bawah.</string>
+    <string name="select_recipient_send_hint">Ketuk kirim jika semua sudah sesuai.</string>
+    <string name="select_recipient_sender_name">Nio Zini</string>
+    <string name="select_recipient_sender_country">Indonesia</string>
+    <string name="select_recipient_penpal_in_region">Sahabat Pena di %1$s</string>
+    <string name="select_recipient_known_recipient">Membalas ke %1$s</string>
+    <string name="select_recipient_to_recipient">Kepada %1$s</string>
+    <string name="select_recipient_next">Lanjut</string>
+    <string name="recipient_picker_title">Pilih Penerima</string>
+    <string name="recipient_picker_tab_regions">Berdasarkan Benua</string>
+    <string name="recipient_picker_tab_address_book">Buku Alamat</string>
+    <string name="recipient_picker_regions_subtitle">Pilih benua untuk mengirim surat ke sahabat pena baru secara acak</string>
+    <string name="recipient_picker_address_book_subtitle">Pilih teman dari buku alamat sahabat penamu yang tersimpan</string>
+    <string name="recipient_picker_address_book_empty_title">Belum Ada Kontak</string>
+    <string name="recipient_picker_address_book_empty_body">Tambahkan kontak sahabat pena dari profil publik untuk kirim surat langsung.</string>
+    <string name="add_recipient_share_contact">Bagikan Kontak</string>
+    <string name="add_recipient_penpals">Sahabat pena di seluruh dunia</string>
+    <string name="region_picker_title">Sahabat pena di seluruh dunia</string>
+    <string name="region_picker_penpal_count">~%1$d potensi sahabat pena</string>
+    <string name="region_picker_penpal_count_many">100+ potensi sahabat pena</string>
+    <string name="region_picker_penpal_count_few">Sahabat pena siap menyapa</string>
+
+    <!-- ── Penpal Regions ────────────────────────────────────────────────── -->
+    <string name="penpal_region_africa">Afrika</string>
+    <string name="penpal_region_antarctica">Antartika</string>
+    <string name="penpal_region_asia">Asia</string>
+    <string name="penpal_region_europe">Eropa</string>
+    <string name="penpal_region_north_america">Amerika Utara</string>
+    <string name="penpal_region_oceania">Oseania</string>
+    <string name="penpal_region_south_america">Amerika Selatan</string>
+
+    <!-- ── Envelope, Stamp & Sticker Picker ──────────────────────────────── -->
+    <string name="envelope_picker_title">Ganti Amplop</string>
+    <string name="envelope_thumbnail_desc">Desain amplop %1$d</string>
+    <string name="stamp_picker_title">Pilih Prangko</string>
+    <string name="stamp_picker_subtitle">Ketuk atau seret untuk menempelkan prangko</string>
+    <string name="stamp_design_rose">Mawar</string>
+    <string name="stamp_design_ocean">Samudra</string>
+    <string name="stamp_design_marigold">Marigold</string>
+    <string name="stamp_design_sage">Sage</string>
+    <string name="stamp_design_plum">Plum</string>
+    <string name="stamp_design_ink">Tinta</string>
+    <string name="stamp_picker_selected_desc">Dipilih</string>
+    <string name="sticker_picker_title">Tambah Stiker</string>
+    <string name="sticker_picker_subtitle">Ketuk untuk menempelkan, ketuk lagi untuk menghapus</string>
+    <string name="sticker_picker_selected_desc">Dipilih</string>
+    <string name="sticker_picker_remove_desc">Hapus stiker</string>
+    <string name="envelope_edit_text_desc">Teks</string>
+    <string name="envelope_edit_envelope_desc">Amplop</string>
+    <string name="envelope_edit_sticker_desc">Tempel Stiker</string>
+    <string name="envelope_edit_stamp_desc">Prangko</string>
+    <string name="send_success_message">Terkirim!</string>
+
+    <!-- ── Navigation & PenPals feed ─────────────────────────────────────── -->
+    <string name="nav_penpals">Penpals</string>
+    <string name="penpals_avatar_desc">Profil</string>
+    <string name="penpals_card_region_label">Sahabat Pena di %1$s</string>
+    <string name="open_letter_close_desc">Tutup</string>
+    <string name="open_letter_like_desc">Suka</string>
+    <string name="open_letter_comment_desc">Komentar</string>
+    <string name="open_letter_bookmark_desc">Simpan</string>
+    <string name="open_letter_share_desc">Bagikan</string>
+    <string name="open_letter_posted_on">Diposting pada %1$s</string>
+    <string name="mailbox_full_view_envelope_desc">Lihat amplop layar penuh</string>
+    <string name="mailbox_full_view_letter_desc">Lihat surat layar penuh</string>
+
+    <!-- ── Collectibles & Item Pickers (Compose & Select Recipient) ── -->
+    <string name="picker_category_basic">Koleksi Dasar</string>
+    <string name="picker_category_collectibles">Koleksi Saya</string>
+    <string name="picker_collectibles_count">%1$d item</string>
+    <string name="picker_collectibles_empty_title">Koleksi Kreator</string>
+    <string name="picker_collectibles_empty_desc">Karya unik dari ilustrator untuk mempercantik suratmu.</string>
+    <string name="picker_collectibles_buy_cta">Beli Koleksi 🛍️</string>
+    <string name="picker_collectibles_more_cta">+ Jelajahi Toko</string>
+    <string name="picker_badge_creator">Kreator</string>
+    <string name="picker_badge_owned">Dimiliki ✓</string>
+    <string name="picker_preview_store_notice">Tersedia di Peny Store. Mau lihat di Toko?</string>
+    <string name="picker_collectibles_find_more_short">Cari Lainnya →</string>
+    <string name="picker_collectibles_find_more_card_title">Cari Koleksi Lain</string>
+    <string name="picker_collectibles_find_more_card_desc">Jelajahi Toko</string>
+
+    <!-- Collectibles Picker aesthetic teasers (tailored per item type) -->
+    <string name="picker_collectibles_paper_pitch">✨ Buat suratmu semakin cantik</string>
+    <string name="picker_collectibles_paper_desc">Temukan kertas surat bertekstur dan bermotif indah.</string>
+    <string name="picker_collectibles_paper_find_more_title">Kertas Cantik</string>
+
+    <string name="picker_collectibles_sticker_pitch">✨ Beri sentuhan manis di suratmu</string>
+    <string name="picker_collectibles_sticker_desc">Hiasi ceritamu dengan ragam stiker karya ilustrator.</string>
+    <string name="picker_collectibles_sticker_find_more_title">Stiker Manis</string>
+
+    <string name="picker_collectibles_envelope_pitch">✨ Berikan rumah istimewa untuk suratmu</string>
+    <string name="picker_collectibles_envelope_desc">Pilih amplop bermotif anggun untuk perjalanan suratmu.</string>
+    <string name="picker_collectibles_envelope_find_more_title">Amplop Cantik</string>
+
+    <string name="picker_collectibles_stamp_pitch">✨ Segel suratmu dengan sentuhan bermakna</string>
+    <string name="picker_collectibles_stamp_desc">Prangko unik karya seniman untuk melengkapi amplopmu.</string>
+    <string name="picker_collectibles_stamp_find_more_title">Prangko Spesial</string>
+
+</resources>

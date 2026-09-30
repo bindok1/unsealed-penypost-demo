@@ -1,0 +1,134 @@
+[versions]
+agp = "9.3.1"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+kotlin = "2.3.20"
+composeBom = "2026.06.00"
+activityCompose = "1.11.0"
+navigationCompose = "2.9.7"
+ksp = "2.3.10"
+hilt = "2.60.1"
+androidxHiltNavigationCompose = "1.3.0"
+haze = "1.7.2"
+coil = "3.5.0"
+# Firebase
+firebaseBom = "33.8.0"
+# Credential Manager (Google Sign-In)
+credentialManager = "1.5.0"
+googleid = "1.1.1"
+# Network
+retrofit = "2.11.0"
+okhttp = "4.12.0"
+moshi = "1.15.2"
+# Chucker
+chucker = "4.1.0"
+# DataStore
+datastorePreferences = "1.1.7"
+# Room
+room = "2.7.1"
+# MapLibre
+maplibre = "13.6.0"
+# Mapbox (Remote-Config-gated alternate renderer — Style.STANDARD)
+mapbox = "11.30.0"
+# Konfetti
+konfetti = "2.0.5"
+# Play Install Referrer (Invite Friends — reads the referrer string set on the
+# Play Store install link so a fresh install can auto-redeem an invite code)
+installReferrer = "2.2"
+# Lottie (Mode Peny's magician-wand trigger glyph — wired-flat JSON assets)
+lottieCompose = "6.7.1"
+# WorkManager (daily "you have unread mail" local reminder)
+work = "2.10.1"
+# Play In-App Review (bottom-sheet star rating, no Play Store redirect)
+playReview = "2.0.2"
+# Play In-App Updates (flexible background download / immediate force update)
+playAppUpdate = "2.1.0"
+# RevenueCat (in-app purchases/subscriptions — wraps Play Billing internally,
+# so this app never talks to BillingClient directly)
+revenuecatPurchases = "10.15.1"
+
+[libraries]
+konfetti-compose = { group = "nl.dionsegijn", name = "konfetti-compose", version.ref = "konfetti" }
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottieCompose" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "androidxHiltNavigationCompose" }
+haze = { group = "dev.chrisbanes.haze", name = "haze", version.ref = "haze" }
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
+# Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+firebase-config = { group = "com.google.firebase", name = "firebase-config" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+# Credential Manager
+google-identity-credential = { group = "androidx.credentials", name = "credentials", version.ref = "credentialManager" }
+google-identity-credential-play = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentialManager" }
+google-identity-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+# Network
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
+# Chucker
+chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+chucker-noop = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
+# DataStore
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastorePreferences" }
+android-installreferrer = { group = "com.android.installreferrer", name = "installreferrer", version.ref = "installReferrer" }
+# Room
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+# MapLibre
+maplibre-android-sdk = { group = "org.maplibre.gl", name = "android-sdk", version.ref = "maplibre" }
+# Mapbox — "-ndk27" artifact variant is built with NDK r27 for 16KB page size
+# alignment (Google Play requirement since Nov 2025); the plain "android"
+# artifact ships 4KB-aligned native libs. https://docs.mapbox.com/android/maps/guides/install/
+mapbox-maps-android = { group = "com.mapbox.maps", name = "android-ndk27", version.ref = "mapbox" }
+# WorkManager — reuses the same androidx.hilt version as hilt-navigation-compose;
+# hilt-work's @HiltWorker codegen is produced by androidx-hilt-compiler, already
+# ksp'd for hiltViewModel() below.
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+androidx-hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "androidxHiltNavigationCompose" }
+# Play In-App Review — "-ktx" transitively pulls in the base "review" artifact.
+google-play-review-ktx = { group = "com.google.android.play", name = "review-ktx", version.ref = "playReview" }
+# Play In-App Updates — "-ktx" transitively pulls in the base "app-update" artifact.
+google-play-app-update-ktx = { group = "com.google.android.play", name = "app-update-ktx", version.ref = "playAppUpdate" }
+# RevenueCat
+revenuecat-purchases = { group = "com.revenuecat.purchases", name = "purchases", version.ref = "revenuecatPurchases" }
+revenuecat-purchases-ui = { group = "com.revenuecat.purchases", name = "purchases-ui", version.ref = "revenuecatPurchases" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.2" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "3.0.3" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

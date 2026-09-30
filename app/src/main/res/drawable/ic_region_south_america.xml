@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#2643A047"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Golden Sun -->
+    <path
+        android:fillColor="#FFFFB300"
+        android:pathData="M30,12a8,8 0,1 0,0 16a8,8 0,1 0,0 -16" />
+    <!-- Andes Mountain Peak -->
+    <path
+        android:fillColor="#FF455A64"
+        android:pathData="M6,36L20,18L32,36Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M20,18L23,23L21,24L19,23L17,24Z" />
+    <!-- Amazon Rainforest Canopy (Front Hills) -->
+    <path
+        android:fillColor="#FF1B5E20"
+        android:pathData="M6,36c4,-6 10,-8 16,-4c4,-5 12,-5 16,0c4,2 6,4 4,4h-36z" />
+    <path
+        android:fillColor="#FF2E7D32"
+        android:pathData="M16,36c3,-4 8,-5 12,-2c3,-3 8,-3 12,0c3,1 4,2 2,2h-26z" />
+    <!-- Toucan / Exotic Bird Silhouette -->
+    <path
+        android:fillColor="#FFFF6F00"
+        android:pathData="M14,16c2,0 4,-1 6,-2c-2,3 -4,3 -6,2z" />
+</vector>

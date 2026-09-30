@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Star tip on top of wand -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M16.5,2 L17.6,5.3 L21,6.5 L17.6,7.7 L16.5,11 L15.4,7.7 L12,6.5 L15.4,5.3 Z" />
+    <!-- Wand shaft -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M14.5,8.5 L4.2,18.8 C3.8,19.2 3.8,19.8 4.2,20.2 L4.8,20.8 C5.2,21.2 5.8,21.2 6.2,20.8 L16.5,10.5 Z" />
+    <!-- Floating magic sparkles -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M7,5 L7.5,6.5 L9,7 L7.5,7.5 L7,9 L6.5,7.5 L5,7 L6.5,6.5 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M20,13 L20.4,14.2 L21.5,14.5 L20.4,14.8 L20,16 L19.6,14.8 L18.5,14.5 L19.6,14.2 Z" />
+</vector>

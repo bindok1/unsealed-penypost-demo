@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#26FFB74D"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Sun / Sunset Background -->
+    <path
+        android:fillColor="#FFFFB74D"
+        android:pathData="M24,11a10,10 0,1 0,0 20a10,10 0,1 0,0 -20" />
+    <!-- Ground Line -->
+    <path
+        android:fillColor="#FFE65100"
+        android:pathData="M8,34h32v4h-32z" />
+    <!-- Acacia Tree Silhouette & Birds -->
+    <path
+        android:fillColor="#FFBF360C"
+        android:pathData="M23,34v-7c0,-2 2,-4 5,-5l4,-2c-2,-3 -6,-3 -9,-1c-3,-3 -8,-2 -10,1l3,2c3,1 4,3 5,5v7z" />
+    <path
+        android:fillColor="#FFBF360C"
+        android:pathData="M16,19c3,-1 7,-1 9,1c-2,1 -5,1 -8,0c-2,0 -4,-1 -4,-1z" />
+    <path
+        android:fillColor="#FFBF360C"
+        android:pathData="M27,17c4,-1 8,0 10,2c-3,1 -6,0 -9,-1z" />
+    <!-- Distant Birds -->
+    <path
+        android:fillColor="#FFE65100"
+        android:pathData="M12,14c1,1 2,0 3,-1c1,1 2,1 3,-1c-1,0 -2,0 -3,1c-1,-1 -2,-1 -3,1z" />
+</vector>

@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#2600ACC1"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Tropical Sun -->
+    <path
+        android:fillColor="#FFFFCA28"
+        android:pathData="M18,14a7,7 0,1 0,0 14a7,7 0,1 0,0 -14" />
+    <!-- Island Beach Base & Ocean Waves -->
+    <path
+        android:fillColor="#FF00838F"
+        android:pathData="M6,35c8,-2 14,1 20,-1c6,-2 12,0 16,1v3h-36z" />
+    <path
+        android:fillColor="#FF00ACC1"
+        android:pathData="M6,33c7,-2 13,1 18,-1c5,-2 10,0 18,1v2c-8,-1 -13,-3 -18,-1c-5,2 -11,0 -18,1z" />
+    <!-- Island / Atoll -->
+    <path
+        android:fillColor="#FFFFE082"
+        android:pathData="M22,34c4,-3 12,-3 18,0z" />
+    <!-- Palm Tree Silhouette -->
+    <path
+        android:fillColor="#FF5D4037"
+        android:pathData="M32,34c-1,-6 2,-11 5,-13l-1,0c-3,2 -6,7 -4,13z" />
+    <!-- Palm Leaves -->
+    <path
+        android:fillColor="#FF2E7D32"
+        android:pathData="M37,21c-4,-3 -9,-2 -11,1c3,1 6,0 11,-1z M37,21c-2,-5 -5,-7 -9,-6c2,3 4,5 9,6z M37,21c3,-5 7,-6 10,-4c-3,3 -5,4 -10,4z M37,21c4,-2 9,-1 11,3c-3,0 -6,-1 -11,-2z" />
+</vector>

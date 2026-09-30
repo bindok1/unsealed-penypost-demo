@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#265C6BC0"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Sky / Moon -->
+    <path
+        android:fillColor="#FF7986CB"
+        android:pathData="M34,14a6,6 0,1 0,0 12a6,6 0,1 0,0 -12" />
+    <!-- Windmill & Castle Architectural Silhouette -->
+    <!-- Base Hills -->
+    <path
+        android:fillColor="#FF283593"
+        android:pathData="M6,36c6,-4 14,-4 20,-1c6,3 12,2 16,0v3h-36z" />
+    <!-- Castle Towers -->
+    <path
+        android:fillColor="#FF1A237E"
+        android:pathData="M12,34v-12h3v-2h2v2h3v12z M13,20L15,15L17,20Z" />
+    <path
+        android:fillColor="#FF303F9F"
+        android:pathData="M20,34v-16h4v-2h2v2h4v16z M22,16L25,10L28,16Z" />
+    <!-- Windmill blades -->
+    <path
+        android:fillColor="#FFFFD54F"
+        android:pathData="M34,22L36,16L37,17L35,23Z M34,22L40,20L40,21L34,23Z M34,22L32,28L31,27L33,21Z M34,22L28,24L28,23L34,21Z" />
+</vector>

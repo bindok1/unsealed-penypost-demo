@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer subtle glow circle -->
+    <path
+        android:fillColor="#2681D4FA"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Water / Ice floe base -->
+    <path
+        android:fillColor="#FF0288D1"
+        android:pathData="M6,32h36v6h-36z" />
+    <!-- Iceberg Main Peaks -->
+    <path
+        android:fillColor="#FFE1F5FE"
+        android:pathData="M14,32L22,12L28,32Z" />
+    <path
+        android:fillColor="#FFB3E5FC"
+        android:pathData="M24,32L32,16L38,32Z" />
+    <!-- Shading on iceberg -->
+    <path
+        android:fillColor="#FF81D4FA"
+        android:pathData="M22,12L25,32L28,32Z" />
+    <path
+        android:fillColor="#FF4FC3F7"
+        android:pathData="M32,16L35,32L38,32Z" />
+    <!-- Snowflakes -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,12h2v2h-2z M36,10h2v2h-2z M10,22h2v2h-2z" />
+</vector>
