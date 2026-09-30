@@ -127,6 +127,19 @@ fun StampsScreen(
     val uiState by viewModel.uiState.collectAsState()
     val activity = LocalActivity.current
     val storePurchaseFailedMessage = stringResource(R.string.error_store_purchase_failed)
+    var demoSnackbarMessage by remember { mutableStateOf<String?>(null) }
+
+    val handleBuyEnergyClick: () -> Unit = remember {
+        {
+            if (BuildConfig.REVENUECAT_API_KEY.isNotBlank() && Purchases.isConfigured) {
+                viewModel.onBuyEnergyClick()
+            } else {
+                viewModel.onEnergyPurchaseCompleted("penypost_energy_50")
+                demoSnackbarMessage = "⚡ Demo Mode: +50 Energi berhasil ditambahkan!"
+            }
+        }
+    }
+
     val initiateStorePurchase: (String, String) -> Unit = remember(activity, storePurchaseFailedMessage) {
         { itemId, tier ->
             if (BuildConfig.REVENUECAT_API_KEY.isNotBlank() && Purchases.isConfigured) {
@@ -175,6 +188,10 @@ fun StampsScreen(
                         } ?: viewModel.onStorePurchaseError(storePurchaseFailedMessage)
                     },
                 )
+            } else {
+                // Demo Mode: Simulate purchase success & celebration
+                viewModel.onStorePurchaseSuccess(itemId)
+                demoSnackbarMessage = "✨ Demo Mode: Pembelian berhasil disimulasikan!"
             }
         }
     }
@@ -279,7 +296,7 @@ fun StampsScreen(
                 val userEnergy = uiState.userEnergy
                 if (userEnergy != null) {
                     Surface(
-                        onClick = viewModel::onBuyEnergyClick,
+                        onClick = handleBuyEnergyClick,
                         shape = RoundedCornerShape(20.dp),
                         color = ToolbarFrostedDark,
                         border = BorderStroke(1.dp, BrandGold.copy(alpha = 0.5f)),
@@ -409,7 +426,7 @@ fun StampsScreen(
                             ) {
                                 item {
                                     EnergyStoreSection(
-                                        onBuyEnergyClick = viewModel::onBuyEnergyClick,
+                                        onBuyEnergyClick = handleBuyEnergyClick,
                                         modifier = Modifier.staggerEntrance(entranceIndex++),
                                     )
                                 }
@@ -531,6 +548,13 @@ fun StampsScreen(
             message = uiState.store.purchaseError,
             onDismiss = viewModel::dismissStorePurchaseError,
             style = SnackbarStyle.Error,
+            modifier = Modifier.align(Alignment.TopCenter),
+        )
+        // Demo purchase success snackbar (when RevenueCat is not configured)
+        LetterlyTopSnackbar(
+            message = demoSnackbarMessage,
+            onDismiss = { demoSnackbarMessage = null },
+            style = SnackbarStyle.Info,
             modifier = Modifier.align(Alignment.TopCenter),
         )
     }
